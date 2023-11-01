@@ -1,0 +1,20 @@
+<app-toolbar-login></app-toolbar-login>
+<div class="container">
+  <div class="registro-content">
+    <img src="https://i.postimg.cc/j2MJ3Qb2/fastporte-logo.png" alt="Logo" class="welcome-image">
+    <h2 class="welcome-title">Complete Your Driving Experience</h2>
+    <div class="registro-box">
+      <form id="myForm" action="" method="post" [formGroup]="companyRegistrationForm3" (submit)="onSubmit()">
+        <div class="form-group">
+          <input type="text" placeholder="Job" formControlName="job" id="job" required class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="Time" formControlName="time_experience" id="time_experience" required class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Continuar</button>
+        <div id="errorMessages" class="error-messages" [innerHTML]="errorMessage">{{errorMessage}}</div>
+      </form>
+    </div>
+  </div>
+</div>
+<app-footer-principal></app-footer-principal>

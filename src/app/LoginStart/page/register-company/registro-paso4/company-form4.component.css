@@ -1,0 +1,62 @@
+/* Estilo del contenedor principal */
+.container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* 100% del alto de la ventana */
+  background-color: #f0f0f0; /* Color de fondo */
+}
+
+/* Estilo del contenido de registro */
+.registro-content {
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título de registro */
+.welcome-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.welcome-image {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+/* Estilo del cuadro de registro */
+.registro-box {
+  text-align: left;
+  width: 350px;
+}
+
+/* Estilo del campo de entrada de texto */
+.form-control {
+  border: none;
+  border-bottom: 1px solid #101010;
+  margin: 10px 0;
+  padding: 10px;
+  width: 300px;
+}
+
+/* Estilo del botón de continuar */
+.btn-primary {
+  background-color: #0004ff; /* Color azul */
+  border: none;
+  border-radius: 20px; /* Bordes redondeados */
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 200px;
+}
+
+/* Estilo de los mensajes de error */
+.alert {
+  margin-top: 10px;
+  color: red;
+}

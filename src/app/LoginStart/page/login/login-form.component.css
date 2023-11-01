@@ -1,0 +1,62 @@
+/* Estilo del contenedor principal */
+.login-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* 100% del alto de la ventana */
+    background-color: #f0f0f0; /* Color de fondo */
+}
+
+/* Estilo del contenido de inicio de sesión */
+.login-content {
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la imagen de bienvenida */
+.welcome-image {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+/* Estilo del título de bienvenida */
+.welcome-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo del cuadro de inicio de sesión */
+.login-box {
+    text-align: center;
+}
+
+/* Estilo del campo de entrada de texto */
+.form-control {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    width: 250px;
+}
+
+/* Estilo del botón de inicio de sesión */
+.btn-primary {
+    background-color: #007bff; /* Color azul */
+    border: none;
+    border-radius: 20px; /* Bordes redondeados */
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Estilo del enlace "Crear una cuenta" */
+.create-account-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #007bff; /* Color azul */
+}

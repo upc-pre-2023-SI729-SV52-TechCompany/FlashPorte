@@ -1,0 +1,29 @@
+<app-toolbar-client></app-toolbar-client>
+
+<div class="profile-container">
+    <div class="left-column">
+        <img src="{{client.photo}}">
+        <br>
+        <h1>{{client.user_name}}</h1>
+        <p>{{client.user_description}}</p>
+        <br>
+        <button type="submit" class="btn btn-primary" (click)="pageSettings()">Edit Profile</button>
+    </div>
+    <br><br><br>
+    <div class="right-column">
+        <h2>Personal Information</h2>
+        <div class="line"></div> <!-- Línea -->
+        <br><br>
+        <h2>Full Name:</h2>
+        <div class="info-box"> <p>{{client.fullname}}</p><br></div><br>
+        <h2>Birthdate:</h2>
+        <div class="info-box"> <p>{{client.birthdate}}</p><br></div><br>
+        <h2>E-Mail:</h2>
+        <div class="info-box"><p>{{client.email}}</p><br></div><br>
+        <h2>Phone:</h2>
+        <div class="info-box"><p>{{client.celular}}</p><br></div><br>
+        <h2>Location:</h2>
+        <div class="info-box"><p>{{client.country}}</p><br></div><br>
+    </div>
+</div>
+<app-footer-start></app-footer-start>

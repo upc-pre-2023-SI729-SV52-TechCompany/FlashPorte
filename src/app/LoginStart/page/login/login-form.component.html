@@ -1,0 +1,27 @@
+<app-toolbar-login></app-toolbar-login>
+<div class="login-container">
+  <div class="login-content">
+    <img src="https://i.postimg.cc/j2MJ3Qb2/fastporte-logo.png" alt="Logo" class="welcome-image">
+    <h2 class="welcome-title">Welcome, Let's Get Started!</h2>
+    <div class="login-box">
+      <form id="loginForm" [formGroup] ="loginForm" (ngSubmit)="onSubmit()">
+        <div class="content">
+          <div class="input-field">
+            <i class='bx bxs-user'><input type="email" id="email" formControlName="email" placeholder="Email Address" required class="form-control">
+            </i>
+          </div>
+
+          <div class="input-field">
+            <i class='bx bxs-lock'>
+            <input type="password" id="password" formControlName="password" placeholder="Password" required class="form-control">
+            </i>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+        <div id="errorMessages" class="error-messages" [innerHTML]="errorMessage">{{errorMessage}}</div>
+      </form>
+        <p class="create-account-link">¿No tienes una cuenta? <a routerLink="/registro">Crea una cuenta</a></p>
+    </div>
+  </div>
+</div>
+<app-footer-principal></app-footer-principal>

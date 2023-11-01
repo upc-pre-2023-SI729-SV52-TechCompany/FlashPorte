@@ -1,0 +1,52 @@
+
+.mat-toolbar-row {
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.color{
+    background-color:#0f15a3 ;
+}
+h1,h2{
+    color: #ffffff;
+}
+
+.logo img {
+    width: 70px; /* Tamaño del logotipo */
+    height: auto; /* Ajustar la altura automáticamente */
+    margin-right: 10px
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+    color: aquamarine;
+}
+
+

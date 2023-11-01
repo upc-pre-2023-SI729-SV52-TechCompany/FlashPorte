@@ -1,0 +1,132 @@
+/* Estilos generales */
+.profile-container {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.left-column {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.left-column img {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.left-column p {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.right-column {
+  flex: 1;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.right-section img{
+  width: 400px;
+  height: 300px;
+  border-radius: 20%;
+}
+
+.tab-header {
+  display: flex; /* Mostrar las pestañas en línea */
+  justify-content: space-between; /* Espacio entre las pestañas */
+  align-items: center; /* Centrar verticalmente las pestañas */
+  padding: 10px 0;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-right: 3px solid transparent;
+}
+
+.tab.active {
+  border-bottom: 1px solid #4CAF50; /* Línea verde debajo de la pestaña activa */
+}
+
+.line {
+  height: 1px;
+  background-color: #252525; /* Color de la línea entre pestañas y contenido */
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.info-box {
+  width: 500px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.info-box p {
+  margin-top: 0;
+  text-align: center;
+}
+
+/* Estilo de botón 3D */
+.info-box:hover {
+  transform: translate(0, -3px);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #007bff; /* Color azul */
+  border: none;
+  border-radius: 20px; /* Bordes redondeados */
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Opcional: Estilo para el contenido de las pestañas */
+.right-section {
+  display: flex;
+  justify-content: space-between; /* Espacio entre las secciones */
+}
+
+.right-section > div {
+  flex: 1;
+}
+
+.about-vehicle {
+  display: flex;
+  align-items: flex-start; /* Alineación vertical superior para las dos columnas */
+}
+
+.documentation {
+  padding-right: 20px; /* Espacio entre las columnas */
+}
+
+.vertical-line {
+  width: 1px; /* Ancho de la línea vertical */
+  background-color: #2c2c2c; /* Color de la línea vertical */
+  margin: 0 20px; /* Espacio entre la línea vertical y las dos columnas */
+}
+
+.photos {
+  padding-left: 20px; /* Espacio entre las columnas */
+}

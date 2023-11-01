@@ -1,0 +1,48 @@
+.service-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+  text-align: center;
+}
+
+.service-card h2 {
+  margin: 0;
+}
+
+.rating {
+  margin-top: 8px;
+}
+/* service-card.component.css */
+
+.star-rating {
+  display: inline-block;
+  font-size: 24px;
+  color: #FFD700; /* Color dorado para las estrellas */
+}
+
+.star-rating .star {
+  display: inline-block;
+  margin-right: 4px; /* Espacio entre las estrellas */
+}
+
+/* Estilo de estrella vacía */
+.star-rating .star::before {
+  content: "\2606"; /* Código de estrella vacía */
+}
+
+/* Estilo de estrella llena */
+.star-rating .star.full::before {
+  content: "\2605"; /* Código de estrella llena */
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff; /* Cambia el color de fondo según tu preferencia */
+  color: white;
+  text-decoration: none;
+  border-radius: 20px; /* Bordes ovalados */
+  margin-top: 12px;
+}

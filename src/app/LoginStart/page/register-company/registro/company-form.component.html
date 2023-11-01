@@ -1,0 +1,23 @@
+<app-toolbar-login></app-toolbar-login>
+<div class="registro-container">
+  <div class="registro-content">
+  <img src="https://i.postimg.cc/j2MJ3Qb2/fastporte-logo.png" alt="Logo" class="welcome-image">
+  <h2 class="welcome-title">Create A New Account</h2>
+  <div class="registro-box">
+    <form id="myForm" action="" method="post" [formGroup]="companyRegistrationForm" (submit)="onSubmit()">
+    <div class="form-group">
+      <input type="email" placeholder="Email" formControlName="email" id="email" required class="form-control">
+    </div>
+    <div class="form-group">
+      <input type="password" placeholder="Contraseña" formControlName="password" id="password" required class="form-control">
+    </div>
+    <div class="form-group">
+      <input type="password" placeholder="Repetir contraseña" formControlName="confirmarpassword" id="confirmarpassword" required class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Continuar</button>
+      <div id="errorMessages" class="error-messages" [innerHTML]="errorMessage">{{errorMessage}}</div>
+  </form>
+</div>
+</div>
+</div>
+<app-footer-principal></app-footer-principal>

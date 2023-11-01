@@ -1,0 +1,67 @@
+<app-toolbar-company></app-toolbar-company>
+
+<div class="profile-container">
+  <div class="left-column">
+    <img src="{{company.photo}}">
+    <br>
+    <h1>{{company.user_name}}</h1>
+    <p>{{company.user_description}}</p>
+    <br>
+    <button type="submit" class="btn btn-primary" (click)="pageSettings()">Edit Profile</button>
+  </div>
+  <br><br><br>
+  <div class="right-column">
+    <div class="tab-header">
+      <div class="tab" [class.active]="showPersonalInformation" (click)="showSection('PersonalInformation')">Personal Information</div>
+      <div class="tab" [class.active]="showExperience" (click)="showSection('Experience')">Experience</div>
+      <div class="tab" [class.active]="showAboutVehicle" (click)="showSection('AboutVehicle')">About The Vehicle</div>
+      <div class="tab" [class.active]="showComments" (click)="showSection('Comments')">Comments</div>
+    </div>
+    <div class="line"></div>
+    <div class="right-section">
+      <div *ngIf="showPersonalInformation">
+    <br><br>
+    <h2>Full Name:</h2>
+    <div class="info-box"> <p>{{company.fullname}}</p><br></div><br>
+    <h2>Age:</h2>
+    <div class="info-box"> <p>{{company.age}} years</p><br></div><br>
+    <h2>E-Mail:</h2>
+    <div class="info-box"><p>{{company.email}}</p><br></div><br>
+    <h2>Phone:</h2>
+    <div class="info-box"><p>{{company.celular}}</p><br></div><br>
+    <h2>Location:</h2>
+    <div class="info-box"><p>{{company.country}}</p><br></div><br>
+    </div>
+      <div *ngIf="showExperience">
+    <br><br>
+    <h2>Job:</h2>
+    <div class="info-box"> <p>{{company.job}}</p><br></div><br>
+    <h2>Time:</h2>
+    <div class="info-box"> <p>{{company.time_experience}}</p><br></div><br>
+    </div>
+      <div *ngIf="showAboutVehicle" class="about-vehicle">
+    <br><br>
+        <div class="documentation">
+          <br><br>
+          <h2>Documentation</h2>
+          <p>Click to check the documents</p>
+          <ul>
+            <li><a href="{{company.license}}">Licencia de conducir</a> </li><br>
+            <li><a href="{{company.soat}}">Soat</a> </li><br>
+            <li><a href="{{company.property_document}}">Documento de propiedad</a> </li><br>
+            <li><a href="{{company.certificate}}">Certificado de revisión técnica</a> </li><br>
+          </ul>
+        </div>
+      <div class="vertical-line"></div> <!-- Línea separadora -->
+      <div class="photos">
+        <br><br>
+        <h2>Photos</h2>
+        <img src="{{company.photovehicle}}"><br><br>
+        <img src="{{company.photovehicle2}}">
+      </div>
+      </div>
+    </div>
+      <div *ngIf="showComments">
+    </div>
+  </div>
+    </div>

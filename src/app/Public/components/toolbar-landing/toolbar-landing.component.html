@@ -1,0 +1,33 @@
+<div class="toolbar-section1">
+    <mat-toolbar>
+        <div id="header" class="fixed-top d-flex align-items-center header-transparent">
+            <img click="pageCompanyTable()" src="https://i.postimg.cc/j2MJ3Qb2/fastporte-logo.png" aria-label="Main page button" alt="Carga logo button" class="img-logo"/>
+            <h1>FastPorte</h1>
+        <span class="spacer"></span>
+        <div class="navbar" id="navbar">
+            <button mat-button class="toolbar-btn" aria-label="User settings page button">
+                <div><a (click)="pageLanding()" class="toolbar-text">Home</a></div>
+            </button>&nbsp;
+            <button mat-button class="toolbar-btn" aria-label="User settings page button">
+                <div><a class="toolbar-text" href="#about" (click)="pageLandingAbout()">About</a></div>
+            </button>&nbsp;
+            <button mat-button class="toolbar-btn" aria-label="User settings page button">
+                <div><a class="toolbar-text" href="#features" (click)="pageLandingFeatures()">Features</a></div>
+            </button>&nbsp;
+            <button mat-button class="toolbar-btn" aria-label="User settings page button">
+                <div><a class="toolbar-text" href="#team" (click)="pageLandingTeam()">Team</a></div>
+            </button>&nbsp;
+            <button mat-button class="toolbar-btn" aria-label="User settings page button">
+                <div><a class="toolbar-text" href="#download" (click)="pageLandingDownload()">Download</a></div>
+            </button>&nbsp;
+            <button mat-button class="toolbar-btn" aria-label="User settings page button">
+                <div><a class="toolbar-text" href="#contact" (click)="pageLandingContact()">Contact</a></div>
+            </button>&nbsp;
+            <button mat-button class="toolbar-btn" aria-label="User settings page button">
+                <div><a (click)="pageLoginForm()" class="toolbar-text">LogIn</a></div>
+            </button>&nbsp;
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </div>
+        </div>
+    </mat-toolbar>
+</div>

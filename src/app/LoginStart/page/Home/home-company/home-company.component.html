@@ -1,0 +1,15 @@
+<div class="service-card">
+  <h2><strong>{{ serviceName }}</strong></h2>
+  <p>Type of service: {{ serviceType }}</p>
+  <p>Type of vehicle: {{ vehicleType }}</p>
+
+  <div class="star-rating">
+    <span class="star full"></span>
+    <span class="star full"></span>
+    <span class="star full"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+  </div><br>
+
+  <a class="button" [routerLink]="serviceUrl">Ver detalles</a>
+</div>

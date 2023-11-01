@@ -1,0 +1,60 @@
+<app-toolbar-client></app-toolbar-client>
+<br><br>
+<div class="container">
+    <div class="container-back">
+        <div class="user-info">
+            <form id="settings" action="" method="post" [formGroup]="userSettingsForm" (submit)="onSubmit()" class="profile-form">
+                <h2>Editar datos de Perfil</h2>
+
+              <div class="form-section">
+                <h3>Credenciales:</h3>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" formControlName="email" id="email" required>
+                </div>
+                  <div class="form-group">
+                    <input type="password" placeholder="Contraseña" formControlName="password" id="password" required> <!--change to text?-->
+                  </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Repetir Contraseña" formControlName="confirmarpassword" id="confirmarpassword" required>
+                  </div>
+              </div>
+
+              <div class="form-section">
+                <h3>Personal Information:</h3>
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" formControlName="fullname" id="fullname" required>
+                </div>
+                <div class="form-group">
+                  <input type="date" placeholder="Date Birthday" formControlName="birthdate" id="birthdate" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Identify Card" formControlName="idNumber" id="idNumber" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="City, Country" formControlName="country" id="country" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Celular" formControlName="celular" id="celular" required>
+                </div>
+                  <div class="form-group">
+                  <input type="text" placeholder="Photo Link" formControlName="photo" id="photo" required>
+                  </div>
+                  </div>
+
+              <div class="form-section">
+                <h3>About you:</h3>
+                <div class="form-group">
+                    <input type="text" placeholder="Username" formControlName="user_name" id="user_name" required>
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Type a description about you" formControlName="user_description" id="user_description" required>
+                </div>
+                </div>
+
+                <button id="submitButton" type="submit">Guardar cambios</button>
+                <button id="cancelButton" type="button" (click)="cancelar()">Cancelar</button>
+                <div id="errorMessages" class="error-messages" [innerHTML]="errorMessage">{{errorMessage}}</div>
+            </form>
+        </div>
+    </div>
+</div>

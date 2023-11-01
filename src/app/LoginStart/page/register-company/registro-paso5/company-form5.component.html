@@ -1,0 +1,31 @@
+<app-toolbar-login></app-toolbar-login>
+<div class="container">
+  <div class="registro-content">
+    <img src="https://i.postimg.cc/j2MJ3Qb2/fastporte-logo.png" alt="Logo" class="welcome-image">
+    <h2 class="welcome-title">Terminate New Account!</h2>
+    <div class="registro-box">
+      <form id="myForm" action="" method="post" [formGroup]="companyRegistrationForm3" (submit)="onSubmit()">
+    <div class="form-group">
+      <input type="text" id="user_name" formControlName="user_name" class="form-control" required placeholder="Username">
+    </div>
+    <div class="form-group">
+      <textarea id="user_description" formControlName="user_description" class="form-control" required placeholder="Type a description about you"></textarea>
+    <br><br>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" id="acceptPolicy" formControlName="acceptPolicy" class="form-check-input" required>
+      <label for="acceptPolicy" class="form-check-label">I agree that I have read and acceptance the Polits and Termins</label>
+    <br>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" id="acceptInfo" formControlName="acceptInfo" class="form-check-input" required>
+      <label for="acceptInfo" class="form-check-label">I agree to the use my information</label>
+    <br><br>
+    </div>
+    <button type="submit" class="btn btn-primary">Registrarse</button>
+        <div id="errorMessages" class="error-messages" [innerHTML]="errorMessage">{{errorMessage}}</div>
+  </form>
+</div>
+  </div>
+</div>
+<app-footer-principal></app-footer-principal>

@@ -1,0 +1,154 @@
+/* Estilo para la sección de soporte */
+.support-section {
+  display: flex;
+  justify-content: space-around; /* Column1 a la izquierda, Column2 a la derecha */
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 20px;
+}
+
+/* Estilo para la columna del mensaje de ayuda */
+.column1 {
+  text-align: center;
+}
+
+.column1 img {
+  max-width: 100%; /* Ajusta la imagen al contenedor */
+  height: auto;
+}
+
+.column1 button {
+  display: block; /* Hacer que el botón ocupe toda la anchura de la columna */
+  margin-top: 20px;
+}
+
+/* Estilo para la columna de información de contacto */
+.column2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+}
+
+.contact-info {
+  margin-top: 20px; /* Agrega espacio entre el mensaje y la información de contacto */
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Estilo para los íconos de redes sociales */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block; /* Para alinear los íconos horizontalmente */
+  margin-right: 10px; /* Agrega espacio entre los íconos */
+}
+
+/* Estilo para el botón de WhatsApp */
+button {
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 25px;
+  background-color: #25d366;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #FFFFFF;
+  color: #1e1f22;
+}
+
+/* Estilo para la sección de redes sociales en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .support-section {
+    flex-direction: column; /* Cambia a una columna en pantallas más pequeñas */
+    align-items: center;
+  }
+
+  .column1,
+  .column2 {
+    width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+  }
+}
+.correo i, .telefono i {
+  font-size: 33px; /* Tamaño de fuente aumentado */
+  color: #07609f; /* Color rojo para el ícono de correo */
+}
+
+.correo {
+  border: 2px solid white; /* Utiliza un porcentaje del ancho del elemento */
+  border-radius: 50px;
+  box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
+  padding-left: 100px; /* Agregar margen interno para separar el texto del borde */
+  padding-right: 100px; /* Agregar margen interno para separar el texto del borde */
+  box-sizing: border-box; /* Controlar cómo se calculan los tamaños (incluyendo el relleno) */
+}
+
+.telefono {
+  border: 2px solid white; /* Utiliza un porcentaje del ancho del elemento */
+  border-radius: 50px;
+  box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
+  padding-left: 100px; /* Agregar margen interno para separar el texto del borde */
+  padding-right: 50px; /* Agregar margen interno para separar el texto del borde */
+  box-sizing: border-box; /* Controlar cómo se calculan los tamaños (incluyendo el relleno) */
+}
+
+
+
+/* Estilo para los íconos de redes sociales */
+.social-links {
+  margin-top: 20px;
+  justify-content: center; /* Centra horizontalmente */
+
+}
+
+.social-links a {
+  display: inline-block; /* Para alinear los íconos horizontalmente */
+  margin-right: 10px; /* Agrega espacio entre los íconos */
+}
+
+.social-links i {
+  font-size: 36px; /* Aumenta el tamaño de los íconos de redes sociales */
+  padding: 5px; /* Agrega un espacio entre el icono y el borde */
+  border-radius: 50%; /* Hace que el borde sea redondeado */
+  color: blue; /* Cambia el color de los íconos a azul */
+}
+
+.social-links i.fa-instagram {
+  color: #E4405F; /* Cambia el color del icono de Instagram */
+}
+
+.social-links i.fa-twitter {
+  color: #1DA1F2; /* Cambia el color del icono de Twitter */
+}
+
+/* Estilo base del botón */
+.questions {
+  background-color: blue;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Estilo para el hover del botón */
+.questions:hover {
+  background-color: blue;
+  box-shadow: 0 0 5px #666;
+}
