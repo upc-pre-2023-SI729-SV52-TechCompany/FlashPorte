@@ -1,4 +1,18 @@
-<div class="service-card">
+<app-toolbar-company></app-toolbar-company>
+<div class="home">
+  <br><br><br>
+  <div class="left-column">
+    <div class="home-wrapper">
+      <div class="home-circle">
+        <img src="{{company.photo}}" alt="Profile Picture">
+        <div class="connected-indicator"></div>
+      </div>
+      <div class="home-info">
+        <h1>Hi, <br> {{company.user_name}}!</h1>
+      </div>
+    </div>
+  </div>
+  <div class="service-card">
   <h2><strong>{{ serviceName }}</strong></h2>
   <p>Type of service: {{ serviceType }}</p>
   <p>Type of vehicle: {{ vehicleType }}</p>
@@ -12,4 +26,5 @@
   </div><br>
 
   <a class="button" [routerLink]="serviceUrl">Ver detalles</a>
+</div>
 </div>

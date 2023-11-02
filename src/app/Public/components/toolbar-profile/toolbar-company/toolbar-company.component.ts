@@ -15,7 +15,8 @@ export class ToolbarCompanyComponent {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   pageHome(){
-    this.router.navigateByUrl('https://upc-pre-2023-si729-sv52-techcompany.github.io/LandingPage-V1/#about');
+    const companyId = this.route.snapshot.params['id'];
+    this.router.navigateByUrl(`/home-company/${companyId}`);
   }
   pageProfile(){
     const companyId = this.route.snapshot.params['id'];
@@ -24,7 +25,7 @@ export class ToolbarCompanyComponent {
 
   pageSupport(){
     const companyId = this.route.snapshot.params['id'];
-    this.router.navigateByUrl(`/supportcompany/${companyId}`);
+    this.router.navigateByUrl(`/support-company/${companyId}`);
   }
 
   pageLogOut(){

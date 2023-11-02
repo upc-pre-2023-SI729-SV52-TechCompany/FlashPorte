@@ -61,7 +61,7 @@ export class LoginFormComponent {
                   console.log("Company Response", companyResponse)
                   if (companyResponse && companyResponse.length > 0) {
                     // Las credenciales son válidas para una empresa, redirigir a la página correspondiente
-                    this.router.navigate(['profile-company', companyResponse[0].id]);
+                    this.router.navigate(['home-company', companyResponse[0].id]);
                   } else {
                     // Ninguna coincidencia, mostramos mensaje de error
                     this.errorMessage = 'Credenciales incorrectas. Intente nuevamente.';

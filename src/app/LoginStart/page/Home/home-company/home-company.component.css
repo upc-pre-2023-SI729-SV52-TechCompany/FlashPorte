@@ -1,3 +1,51 @@
+.left-column {
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+}
+
+.home-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.home-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin-left: 150px;
+}
+
+.home-circle img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.connected-indicator {
+  width: 25px;
+  height: 25px;
+  background-color: #5ade5d;
+  border-radius: 50%;
+  position: unset;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+  border: 2px solid white;
+}
+
+.home-info {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-left: 200px;
+}
+
 .service-card {
   border: 1px solid #ccc;
   padding: 16px;
