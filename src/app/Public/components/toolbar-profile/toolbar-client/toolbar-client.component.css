@@ -7,7 +7,7 @@
 .user-info {
   display: flex;
   align-items: center; /* Centra verticalmente el contenido en el contenedor */
-  margin-left: 1790px;
+  margin-left: 1000px;
 }
 
 /* Update the font size for the user's full name */
