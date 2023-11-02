@@ -35,7 +35,8 @@ export class ToolbarClientComponent {
   }
 
   pageSupport() {
-    this.router.navigateByUrl('/supportclient');
+    const clientId = this.route.snapshot.params['id'];
+    this.router.navigateByUrl(`/supportclient/${clientId}`);
   }
 
   pageLogOut() {

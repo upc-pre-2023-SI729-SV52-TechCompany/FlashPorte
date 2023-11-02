@@ -37,8 +37,8 @@ const routes: Routes = [
   { path: 'home-company/:id', component: HomeCompanyComponent },
   { path: 'searchvehicle/:id', component: SearchvehicleComponent },
   { path: 'contracts/:id', component: ContractsComponent },
-  { path: 'supportcompany', component: SupportCompanyComponent },
-  { path: 'supportclient', component: SupportClientComponent },
+  { path: 'supportcompany/:id', component: SupportCompanyComponent },
+  { path: 'supportclient/:id', component: SupportClientComponent },
 ];
 
 @NgModule({

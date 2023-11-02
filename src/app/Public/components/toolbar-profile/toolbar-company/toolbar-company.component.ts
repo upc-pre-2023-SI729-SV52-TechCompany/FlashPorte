@@ -23,7 +23,8 @@ export class ToolbarCompanyComponent {
   }
 
   pageSupport(){
-    this.router.navigateByUrl('/supportcompany');
+    const companyId = this.route.snapshot.params['id'];
+    this.router.navigateByUrl(`/supportcompany/${companyId}`);
   }
 
   pageLogOut(){
