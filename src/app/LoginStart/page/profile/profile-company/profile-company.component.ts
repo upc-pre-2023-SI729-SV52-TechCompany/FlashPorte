@@ -41,7 +41,7 @@ export class ProfileCompanyComponent implements OnInit  {
     }
 
   pageSettings(){
-    this.router.navigateByUrl('/company-settings/:id');
+    this.router.navigateByUrl('/company-settings');
   }
 
   showSection(section: string) {

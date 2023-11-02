@@ -3,8 +3,8 @@
     {
       "email": "miguel@gmail.com",
       "password": "123456",
-      "fullname": "Miguel Gomez Castro",
-      "celular": "950345876",
+      "fullName": "Miguel Gomez Castro",
+      "Celular": "950345876",
       "birthdate": "1987-04-13",
       "age": "36",
       "idNumber": "71345698",
@@ -25,8 +25,8 @@
     {
       "email": "mariogomez@gmail.com",
       "password": "123456",
-      "fullname": "Mario Andy Gomez Gutierrez",
-      "celular": "945678934",
+      "fullName": "Mario Andy Gomez Gutierrez",
+      "Celular": "945678934",
       "birthdate": "1982-10-10",
       "age": "41",
       "idNumber": "71345698",
