@@ -119,10 +119,7 @@ export class ClientSettingsComponent {
 
     }
   pageSettings() {
-    // Obtén el ID del cliente
-    const clientId = this.client.id; // Asegúrate de que el objeto 'client' tenga una propiedad 'id'
-
-    // Redirige a la página de configuración del cliente con el ID
+    const clientId = this.route.snapshot.params['id'];
     this.router.navigateByUrl(`/profile-client/${clientId}`);
   }
 
