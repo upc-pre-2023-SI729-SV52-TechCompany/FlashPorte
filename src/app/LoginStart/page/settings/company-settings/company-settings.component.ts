@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class CompanySettingsComponent {
   userSettingsForm: FormGroup;
   errorMessage: string = '';
+  company: any='';
   id: any;
   constructor(private fb: FormBuilder, private api: FastporteDataService, private route: ActivatedRoute, private router: Router) {
     this.userSettingsForm = this.fb.group({
@@ -171,8 +172,9 @@ export class CompanySettingsComponent {
 
   }
 
-  cancelar(){
-    this.router.navigate(['profile-company/:id']);
+  pageSettings(){
+    const companyId = this.route.snapshot.params['id'];
+    this.router.navigateByUrl(`/profile-company/${companyId}`);
   }
 
 }

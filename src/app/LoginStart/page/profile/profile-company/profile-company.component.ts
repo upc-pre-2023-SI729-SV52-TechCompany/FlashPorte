@@ -40,8 +40,9 @@ export class ProfileCompanyComponent implements OnInit  {
         );
     }
 
-  pageSettings(){
-    this.router.navigateByUrl('/company-settings');
+  pageSettings() {
+    const companyId = this.company.id;
+    this.router.navigateByUrl(`/company-settings/${companyId}`);
   }
 
   showSection(section: string) {

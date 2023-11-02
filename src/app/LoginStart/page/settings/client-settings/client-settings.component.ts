@@ -16,7 +16,7 @@ export class ClientSettingsComponent {
     id: any;
     client: any='';
 
-    constructor(private clientDataService: FastporteDataService, private fb: FormBuilder, private api: FastporteDataService, private route: ActivatedRoute, private router: Router) {
+    constructor(private fb: FormBuilder, private api: FastporteDataService, private route: ActivatedRoute, private router: Router) {
       this.userSettingsForm = this.fb.group({
             email: ['', [Validators.required, Validators.email]],
             password: ['', [Validators.required, Validators.minLength(6)]],
