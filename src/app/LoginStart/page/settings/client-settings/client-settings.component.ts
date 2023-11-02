@@ -14,9 +14,10 @@ export class ClientSettingsComponent {
     userSettingsForm: FormGroup;
     errorMessage: string = '';
     id: any;
+    client: any='';
 
-    constructor(private fb: FormBuilder, private api: FastporteDataService, private route: ActivatedRoute, private router: Router) {
-        this.userSettingsForm = this.fb.group({
+    constructor(private clientDataService: FastporteDataService, private fb: FormBuilder, private api: FastporteDataService, private route: ActivatedRoute, private router: Router) {
+      this.userSettingsForm = this.fb.group({
             email: ['', [Validators.required, Validators.email]],
             password: ['', [Validators.required, Validators.minLength(6)]],
             confirmarpassword: ['', Validators.required],
@@ -117,9 +118,12 @@ export class ClientSettingsComponent {
         }
 
     }
+  pageSettings() {
+    // Obtén el ID del cliente
+    const clientId = this.client.id; // Asegúrate de que el objeto 'client' tenga una propiedad 'id'
 
-    cancelar(){
-        this.router.navigate(['/profile-client/:id']);
-    }
+    // Redirige a la página de configuración del cliente con el ID
+    this.router.navigateByUrl(`/profile-client/${clientId}`);
+  }
 
 }

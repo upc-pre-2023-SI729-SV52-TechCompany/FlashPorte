@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { MatMenu } from '@angular/material/menu';
 
 @Component({
@@ -12,29 +13,32 @@ export class ToolbarClientComponent {
 
   userFullName = 'User Full Name';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
-  pageHome(){
+  pageHome() {
     this.router.navigateByUrl('https://upc-pre-2023-si729-sv52-techcompany.github.io/LandingPage-V1/#about');
   }
 
-  pageProfile(){
-    this.router.navigateByUrl('/profile-client/:id');
+  pageProfile() {
+    const clientId = this.route.snapshot.params['id'];
+    this.router.navigateByUrl(`/profile-client/${clientId}`);
   }
 
-  pageSearchVehicles(){
-    this.router.navigateByUrl('/searchvehicle/:id');
+  pageSearchVehicles() {
+    const clientId = this.route.snapshot.params['id'];
+    this.router.navigateByUrl(`/searchvehicle/${clientId}`);
   }
 
-  pageContracts(){
-    this.router.navigateByUrl('/contracts/:id');
+  pageContracts() {
+    const clientId = this.route.snapshot.params['id'];
+    this.router.navigateByUrl(`/contracts/${clientId}`);
   }
 
-  pageSupport(){
+  pageSupport() {
     this.router.navigateByUrl('/supportclient');
   }
 
-  pageLogOut(){
+  pageLogOut() {
     this.router.navigateByUrl('login');
   }
 }
