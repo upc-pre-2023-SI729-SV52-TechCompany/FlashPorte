@@ -8,10 +8,22 @@
   </div>
 <br><br><br>
 <div class="container">
-  <div class="left-container">
-    <h2>Popular Drivers</h2>
+  <div class="popular">
+    <h2>Popular Clients</h2>
+      <div *ngFor="let client of clients" class="left-container">
+        <div class="client-details">
+          <img src="{{ client.photo }}" alt="client" class="circular-image">
+          <div class="info">
+            <h3>{{ client.fullname }}</h3>
+            <p>{{ client.email }}</p>
+            <p>{{ client.country }}</p>
+          </div>
+        </div>
+    </div>
   </div>
-  <div class="right-container">
+  <div class="contracts">
     <h2>Contracts</h2>
+      <div class="right-container">
+      </div>
   </div>
 </div>

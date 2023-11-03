@@ -1,0 +1,29 @@
+<app-toolbar-client></app-toolbar-client>
+<br><br><br><br>
+<div class="home-container">
+  <img src="{{client.photo }}" alt="Home Picture" class="circular-image">
+  <div class="greeting">
+    <h1>Hi, <br> {{ client.user_name }}!</h1>
+  </div>
+</div>
+<br><br><br>
+<div class="container">
+  <div class="popular">
+    <h2>Popular Drivers</h2>
+    <div *ngFor="let company of companies" class="left-container">
+      <div class="company-details">
+        <img src="{{ company.photo }}" alt="company" class="circular-image">
+        <div class="info">
+          <h3>{{ company.fullName }}</h3>
+          <p>{{ company.email }}</p>
+          <p>{{ company.country }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contracts">
+    <h2>Contracts</h2>
+    <div class="right-container">
+    </div>
+  </div>
+</div>

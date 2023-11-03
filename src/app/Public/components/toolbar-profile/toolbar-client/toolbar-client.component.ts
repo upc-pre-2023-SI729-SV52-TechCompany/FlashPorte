@@ -16,7 +16,8 @@ export class ToolbarClientComponent {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   pageHome() {
-    this.router.navigateByUrl('https://upc-pre-2023-si729-sv52-techcompany.github.io/LandingPage-V1/#about');
+    const clientId = this.route.snapshot.params['id'];
+    this.router.navigateByUrl(`/home-client/${clientId}`);
   }
 
   pageProfile() {
@@ -26,7 +27,7 @@ export class ToolbarClientComponent {
 
   pageSearchVehicles() {
     const clientId = this.route.snapshot.params['id'];
-    this.router.navigateByUrl(`/searchvehicle/${clientId}`);
+    this.router.navigateByUrl(`/search-vehicle/${clientId}`);
   }
 
   pageContracts() {
@@ -36,7 +37,7 @@ export class ToolbarClientComponent {
 
   pageSupport() {
     const clientId = this.route.snapshot.params['id'];
-    this.router.navigateByUrl(`/supportclient/${clientId}`);
+    this.router.navigateByUrl(`/support-client/${clientId}`);
   }
 
   pageLogOut() {

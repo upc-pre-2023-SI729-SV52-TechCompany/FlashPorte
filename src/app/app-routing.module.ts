@@ -18,7 +18,8 @@ import { ContractsComponent } from "./LoginStart/page/contracts/contracts.compon
 import { SupportCompanyComponent } from "./LoginStart/page/support/support-company/support-company.component";
 import { SupportClientComponent } from "./LoginStart/page/support/support-client/support-client.component";
 import { HomeCompanyComponent } from "./LoginStart/page/Home/home-company/home-company.component";
-import {VehicleReservationComponent} from "./LoginStart/page/vehicle-reservation/vehicle-reservation.component";
+import { HomeClientComponent } from "./LoginStart/page/Home/home-client/home-client.component";
+import { VehicleReservationComponent } from './LoginStart/page/vehicle-reservation/vehicle-reservation.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -36,11 +37,12 @@ const routes: Routes = [
   { path: 'client-settings/:id', component: ClientSettingsComponent },
   { path: 'company-settings/:id', component: CompanySettingsComponent },
   { path: 'home-company/:id', component: HomeCompanyComponent },
-  { path: 'searchvehicle/:id', component: SearchvehicleComponent },
+  { path: 'home-client/:id', component: HomeClientComponent },
+  { path: 'search-vehicle/:id', component: SearchvehicleComponent },
   { path: 'contracts/:id', component: ContractsComponent },
   { path: 'support-company/:id', component: SupportCompanyComponent },
-  { path: 'supportclient/:id', component: SupportClientComponent },
-  {path: 'vehiclereservation/:id', component: VehicleReservationComponent},
+  { path: 'support-client/:id', component: SupportClientComponent },
+  { path: 'vehiclereservation/:id', component: VehicleReservationComponent},
 ];
 
 @NgModule({

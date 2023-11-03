@@ -35,6 +35,10 @@ export class FastporteDataService {
     return this.http.get<Company>(this.base_url+"/"+"companies").pipe(retry(2),catchError(this.handleError));
   }
 
+  getAllClients(): Observable<Client> {
+    return this.http.get<Client>(this.base_url+"/"+"clients").pipe(retry(2),catchError(this.handleError));
+  }
+
   //createReservation(item: any): Observable<BookingHistory>{
     //return this.http.post<BookingHistory>(this.base_url+"/"+"bookingHistory", JSON.stringify(item), this.httpOptions).pipe(retry(2),catchError(this.handleError));
   //}

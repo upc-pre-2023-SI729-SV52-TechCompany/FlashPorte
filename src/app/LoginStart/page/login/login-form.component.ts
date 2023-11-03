@@ -46,24 +46,19 @@ export class LoginFormComponent {
       this.passwordVerify = this.loginForm.value.password;
 
       try {
-        // Buscar en clientes
         this.api.getClientsForLogin(this.emailVerify, this.passwordVerify)
           .subscribe((clientResponse: any) => {
             console.log("Client Response", clientResponse)
             if (clientResponse && clientResponse.length > 0) {
-              // Las credenciales son válidas para un cliente, redirigir a la página correspondiente
-              this.router.navigate(['profile-client', clientResponse[0].id]);
+              this.router.navigate(['home-client', clientResponse[0].id]);
             }
             else {
-              // Intentamos buscar en empresas si no encontramos en clientes
               this.api.getCompaniesForLogin(this.emailVerify, this.passwordVerify)
                 .subscribe((companyResponse: any) => {
                   console.log("Company Response", companyResponse)
                   if (companyResponse && companyResponse.length > 0) {
-                    // Las credenciales son válidas para una empresa, redirigir a la página correspondiente
                     this.router.navigate(['home-company', companyResponse[0].id]);
                   } else {
-                    // Ninguna coincidencia, mostramos mensaje de error
                     this.errorMessage = 'Credenciales incorrectas. Intente nuevamente.';
                   }
                 }, (error: any) => {

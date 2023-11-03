@@ -23,6 +23,7 @@ import { ClientSettingsComponent} from "./LoginStart/page/settings/client-settin
 import { CompanySettingsComponent } from "./LoginStart/page/settings/company-settings/company-settings.component";
 import { SearchvehicleComponent } from "./LoginStart/page/searchvehicle/searchvehicle.component";
 import { HomeCompanyComponent } from "./LoginStart/page/Home/home-company/home-company.component";
+import { HomeClientComponent } from "./LoginStart/page/Home/home-client/home-client.component";
 import { ContractsComponent } from "./LoginStart/page/contracts/contracts.component";
 import { SupportClientComponent } from "./LoginStart/page/support/support-client/support-client.component";
 import { SupportCompanyComponent } from "./LoginStart/page/support/support-company/support-company.component";
@@ -57,6 +58,7 @@ import { VehicleReservationComponent } from './LoginStart/page/vehicle-reservati
     ClientSettingsComponent,
     CompanySettingsComponent,
     HomeCompanyComponent,
+    HomeClientComponent,
     SearchvehicleComponent,
     ContractsComponent,
     SupportClientComponent,
