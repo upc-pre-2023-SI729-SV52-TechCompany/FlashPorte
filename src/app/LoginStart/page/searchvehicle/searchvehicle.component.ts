@@ -49,6 +49,6 @@ export class SearchvehicleComponent implements OnInit {
   getRow(row: { id: any; }){
     console.log("Row clicked: ");
     console.log(row);
-    this.router.navigateByUrl(`/company/${row.id}`);
+    this.router.navigateByUrl(`/vehiclereservation/${row.id}`);
   }
 }

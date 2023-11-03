@@ -1,13 +1,14 @@
-<!-- Card de la información del transportista -->
+<app-toolbar-client></app-toolbar-client>
 <div class="card">
-  <img src="" alt="">
+  <img src="{{company.photo}}" alt="">
   <div class="card-info">
-    <p>Transportista</p>
-    <h3>Servicios:</h3>
-    <h3>Descripción:</h3>
-    <h3>Dirección:</h3>
-    <h3>Contacto:</h3>
-    <h3>Número de contacto:</h3>
+    <h1>Transportista:</h1>
+    <h2>{{company.fullName}}</h2>
+    <p><strong>Trabajo:</strong>{{company.job}}</p>
+    <p><strong>Descripción:</strong>{{company.user_description}}</p>
+    <p><strong>Dirección:</strong>{{company.country}}</p>
+    <p><strong>Email:</strong> {{company.email}}</p>
+    <p><strong>Número de contacto:</strong> {{company.Celular}}</p>
   </div>
 </div>
 
@@ -79,3 +80,4 @@
     </form>
   </div>
 </div>
+<app-footer-principal></app-footer-principal>
