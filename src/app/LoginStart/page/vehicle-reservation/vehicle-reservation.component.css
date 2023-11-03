@@ -27,13 +27,13 @@ body {
   border-top-right-radius: 5px;
 }
 
-.card-info h3 {
+.card-info p {
   font-size: 15px;
   color: black;
   margin: 10px 10px;
 }
 
-h3 {
+p {
   text-align: left;
 }
 
