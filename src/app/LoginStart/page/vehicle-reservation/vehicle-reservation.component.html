@@ -1,34 +1,28 @@
-<!--Card de la infromacion del transportista-->
+<!-- Card de la información del transportista -->
 <div class="card">
   <img src="" alt="">
-  <br>
   <div class="card-info">
     <p>Transportista</p>
-    <br>
     <h3>Servicios:</h3>
     <h3>Descripción:</h3>
-    <h3>Dirección:</h3>
     <h3>Dirección:</h3>
     <h3>Contacto:</h3>
     <h3>Número de contacto:</h3>
   </div>
 </div>
 
-
-<!--reseñas del transportista-->
-
-    <div class="formulario-container" [ngClass]="{ 'active': mostrarElement }">
-      <div class="formulario-title" (click)="toggleElement('reseñas-content')">
-        <h2>Formulario de Reserva</h2>
-        <div>{{ mostrarFormulario ? '▼' : '▲' }}</div>
-      </div>
-      <div class="formulario-content" [ngClass]="{ 'active': mostrarElement }">
-
-    <form (ngSubmit)="enviarReseña()" id="reseñas-form">
+<!-- Reseñas del transportista -->
+<div class="formulario-container" [ngClass]="{ 'active': mostrarElement }">
+  <div class="formulario-title" (click)="toggleElement()">
+    <h2>Formulario de Reseña</h2>
+    <div>{{ mostrarElement ? '▼' : '▲' }}</div>
+  </div>
+  <div class="formulario-content" [ngClass]="{ 'active': mostrarElement }">
+    <form (ngSubmit)="enviarResenia()" id="reseñas-form">
       <label for="nombreUsuario">Nombre de usuario:</label>
       <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Escribe tu nombre de usuario" required [(ngModel)]="nombreUsuario"><br><br>
 
-      <label for="calificación">Calificación:</label>
+      <label for="calificacion">Calificación:</label>
       <div class="rating">
         <span class="star" (click)="setRating(1)">&#9733;</span>
         <span class="star" (click)="setRating(2)">&#9733;</span>
@@ -36,60 +30,52 @@
         <span class="star" (click)="setRating(4)">&#9733;</span>
         <span class="star" (click)="setRating(5)">&#9733;</span>
       </div>
-      <input type="hidden" id="rating" name="calificación" value="0" required [(ngModel)]="calificacion">
+      <input type="hidden" id="calificacion" name="calificacion" value="0" required [(ngModel)]="calificacion">
 
-      <label for="reseña">Reseña:</label>
-      <textarea id="reseña" name="reseña" placeholder="Escribe tu reseña" required [(ngModel)]="reseña"></textarea><br><br>
+      <label for="resenia">Reseña:</label>
+      <textarea id="resenia" name="resenia" placeholder="Escribe tu reseña" required [(ngModel)]="resenia"></textarea><br><br>
 
       <input type="submit" value="Enviar Reseña">
     </form>
   </div>
 </div>
-<!--formulario de reserva -->
 
+<!-- Formulario de reserva -->
 <div class="formulario-container" [ngClass]="{ 'active': mostrarFormulario }">
   <div class="formulario-title" (click)="toggleFormulario()">
     <h2>Formulario de Reserva</h2>
     <div>{{ mostrarFormulario ? '▼' : '▲' }}</div>
   </div>
   <div class="formulario-content" [ngClass]="{ 'active': mostrarFormulario }">
-    <form>
-      <form>
-        <label for="fechaHoy">Fecha de hoy:</label>
-        <input type="date" id="fechaHoy" name="fechaHoy" placeholder="Ex. 2023-09-25" required><br><br>
+    <form (ngSubmit)="realizarReserva()" id="reserva-form">
+      <label for="fechaHoy">Fecha de hoy:</label>
+      <input type="date" id="fechaHoy" name="fechaHoy" placeholder="Ex. 2023-09-25" required><br><br>
 
-        <label for="servicios">Servicios:</label>
-        <input type="text" id="servicios" name="servicios" placeholder="Ex. Carga" required><br><br>
+      <label for="servicios">Servicios:</label>
+      <input type="text" id="servicios" name="servicios" placeholder="Ex. Carga" required><br><br>
 
-        <label for="direccionEntrega">Dirección de entrega:</label>
-        <input type="text" id="direccionEntrega" name="direccionEntrega" placeholder="Ex. Monterrico" required><br><br>
+      <label for="direccionEntrega">Dirección de entrega:</label>
+      <input type="text" id="direccionEntrega" name="direccionEntrega" placeholder="Ex. Monterrico" required><br><br>
 
-        <label for="direccionDestino">Dirección de destino:</label>
-        <input type="text" id="direccionDestino" name="direccionDestino" placeholder="Ex. Monterrico" required><br><br>
+      <label for="direccionDestino">Dirección de destino:</label>
+      <input type="text" id="direccionDestino" name="direccionDestino" placeholder="Ex. Monterrico" required><br><br>
 
-        <label for="fechaServicio">Fecha cuando el servicio se lleva a cabo:</label>
-        <input type="date" id="fechaServicio" name="fechaServicio" placeholder="Ex. 2023-09-30" required><br><br>
+      <label for="fechaServicio">Fecha cuando el servicio se lleva a cabo:</label>
+      <input type="date" id="fechaServicio" name="fechaServicio" placeholder="Ex. 2023-09-30" required><br><br>
 
-        <label for="horaServicio">Hora cuando el servicio se lleva a cabo:</label>
-        <input type="time" id="horaServicio" name="horaServicio" placeholder="Ex. 16:00" required><br><br>
+      <label for="horaServicio">Hora cuando el servicio se lleva a cabo:</label>
+      <input type="time" id="horaServicio" name="horaServicio" placeholder="Ex. 16:00" required><br><br>
 
-        <label for="numeroTarjeta">Número de tarjeta de pago:</label>
-        <input type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="Ex. 0000000000000000" required><br><br>
+      <label for="numeroTarjeta">Número de tarjeta de pago:</label>
+      <input type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="Ex. 0000000000000000" required><br><br>
 
-        <label for="cvvTarjeta">CVV de la tarjeta de pago:</label>
-        <input type="text" id="cvvTarjeta" name="cvvTarjeta" placeholder="000" required><br><br>
+      <label for="cvvTarjeta">CVV de la tarjeta de pago:</label>
+      <input type="text" id="cvvTarjeta" name="cvvTarjeta" placeholder="000" required><br><br>
 
-        <label for="vencimientoTarjeta">Fecha de vencimiento de la tarjeta:</label>
-        <input type="text" id="vencimientoTarjeta" name="vencimientoTarjeta" placeholder="00/00" required><br><br>
+      <label for="vencimientoTarjeta">Fecha de vencimiento de la tarjeta:</label>
+      <input type="text" id="vencimientoTarjeta" name="vencimientoTarjeta" placeholder="00/00" required><br><br>
 
-        <input type="submit" value="Realizar reserva">
-
-      </form>
+      <input type="submit" value="Realizar reserva">
     </form>
-    <div id="formularioOculto" class="formulario">
-      <h2>Formulario de Reserva</h2>
-    </div>
   </div>
 </div>
-
-

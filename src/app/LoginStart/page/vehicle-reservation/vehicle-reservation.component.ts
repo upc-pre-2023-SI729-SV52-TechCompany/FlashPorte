@@ -9,10 +9,10 @@ export class VehicleReservationComponent {
     mostrarElement: boolean = false;
     nombreUsuario: string = '';
     calificacion: number = 0;
-    reseña: string = '';
+    resenia: string = '';
     mostrarFormulario: boolean = false;
 
-    toggleElement(elementId: string) {
+    toggleElement() {
         this.mostrarElement = !this.mostrarElement;
     }
 
@@ -20,13 +20,17 @@ export class VehicleReservationComponent {
         this.calificacion = rating;
     }
 
-    enviarReseña() {
+    enviarResenia() {
         console.log('Nombre de usuario:', this.nombreUsuario);
         console.log('Calificación:', this.calificacion);
-        console.log('Reseña:', this.reseña);
+        console.log('Reseña:', this.resenia);
     }
 
     toggleFormulario() {
         this.mostrarFormulario = !this.mostrarFormulario;
+    }
+
+    realizarReserva() {
+        // Agrega aquí la lógica para manejar la reserva
     }
 }
