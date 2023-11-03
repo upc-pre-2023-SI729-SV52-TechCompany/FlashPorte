@@ -8,6 +8,10 @@ import {Component} from '@angular/core';
 
 
 export class VehicleReservationComponent {
+  public mostrarFormulario: boolean = false;
 
+  toggleFormulario() {
+    this.mostrarFormulario = !this.mostrarFormulario;
+  }
 
 }

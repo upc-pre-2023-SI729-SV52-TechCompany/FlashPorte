@@ -36,3 +36,57 @@ body {
 h3 {
   text-align: left;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.formulario-container {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-height: 50px;
+  overflow: hidden;
+  transition: max-height 0.4s;
+}
+
+.formulario-content {
+  display: none;
+  padding: 20px;
+}
+
+.formulario-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.formulario-title h2 {
+  margin: 0;
+}
+
+.formulario-content.active {
+  display: block;
+}
+
+.formulario-container.active {
+  max-height: 500px;
+}
+
+#formularioOculto {
+  display: none;
+}
+
+#iconoFormulario {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}

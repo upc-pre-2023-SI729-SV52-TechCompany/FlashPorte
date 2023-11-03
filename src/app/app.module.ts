@@ -84,5 +84,6 @@ import { VehicleReservationComponent } from './LoginStart/page/vehicle-reservati
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
