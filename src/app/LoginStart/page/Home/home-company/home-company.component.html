@@ -1,32 +1,17 @@
 <app-toolbar-company></app-toolbar-company>
-<div class="home">
-  <br><br><br>
-  <div class="left-column">
-    <div class="home-wrapper">
-      <div class="home-circle">
-        <img src="{{company.photo }}" alt="Profile Picture">
-        <div class="connected-indicator"></div>
-      </div>
-      <div class="home-info">
-        <h1>Hi, <br> {{company.user_name}}!</h1>
-      </div>
+<br><br><br><br>
+  <div class="home-container">
+    <img src="{{company.photo }}" alt="Home Picture" class="circular-image">
+    <div class="greeting">
+      <h1>Hi, <br> {{ company.user_name }}!</h1>
     </div>
   </div>
-  <div class="service-card">
-    <h2><strong>{{ serviceName }}</strong></h2>
-    <p>Type of service: {{ serviceType }}</p>
-    <p>Type of vehicle: {{ vehicleType }}</p>
-
-    <div class="star-rating">
-      <span class="star full"></span>
-      <span class="star full"></span>
-      <span class="star full"></span>
-      <span class="star"></span>
-      <span class="star"></span>
-    </div><br>
-
-    <a class="button" [routerLink]="serviceUrl">Ver detalles</a>
+<br><br><br>
+<div class="container">
+  <div class="left-container">
+    <h2>Popular Drivers</h2>
   </div>
-
+  <div class="right-container">
+    <h2>Contracts</h2>
+  </div>
 </div>
-
