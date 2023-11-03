@@ -14,6 +14,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class SearchvehicleComponent implements OnInit {
 
+
   companyData!: Company; //! significa que se inicializara mas adelante
   dataSource_company = new MatTableDataSource();
   displayedColumns: string[] = ['id', 'name', 'services', 'photo'];

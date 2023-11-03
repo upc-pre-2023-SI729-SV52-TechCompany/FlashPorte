@@ -37,6 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterPrincipalComponent } from './Public/components/footer/footer-principal/footer-principal.component';
 import { FooterStartComponent } from "./Public/components/footer/footer-start/footer-start.component";
 import { MatTabsModule } from "@angular/material/tabs";
+import { VehicleReservationComponent } from './LoginStart/page/vehicle-reservation/vehicle-reservation.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { MatTabsModule } from "@angular/material/tabs";
     ToolbarClientComponent,
     ToolbarCompanyComponent,
     FooterPrincipalComponent,
-    FooterStartComponent
+    FooterStartComponent,
+    VehicleReservationComponent
   ],
   imports: [
     BrowserModule,

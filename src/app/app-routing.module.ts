@@ -18,6 +18,7 @@ import { ContractsComponent } from "./LoginStart/page/contracts/contracts.compon
 import { SupportCompanyComponent } from "./LoginStart/page/support/support-company/support-company.component";
 import { SupportClientComponent } from "./LoginStart/page/support/support-client/support-client.component";
 import { HomeCompanyComponent } from "./LoginStart/page/Home/home-company/home-company.component";
+import {VehicleReservationComponent} from "./LoginStart/page/vehicle-reservation/vehicle-reservation.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path: 'contracts/:id', component: ContractsComponent },
   { path: 'support-company/:id', component: SupportCompanyComponent },
   { path: 'supportclient/:id', component: SupportClientComponent },
+  {path: 'vehiclereservation/:id', component: VehicleReservationComponent},
 ];
 
 @NgModule({

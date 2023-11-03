@@ -213,6 +213,19 @@
       "user_name": "Mateo Lopez",
       "user_description": "Hola, mi nombre es Mateo, y tengo 43 años. Soy un cliente que valora mucho la eficiencia y la tranquilidad en los servicios de transporte. Como emprendedor, gestiono un negocio de comercio electrónico y, en consecuencia, la logística de mis productos es esencial para mi operación. FastPorte me ha llamado la atención por su reputación de confiabilidad y su historial probado en el transporte eficiente de mercancías. Además, aprecio la flexibilidad que ofrecen para adaptarse a mis necesidades específicas, ya que, en ocasiones, requiero entregas programadas o características adicionales para ciertos envíos.",
       "id": 2
+    },
+    {
+      "email": "mariela@gmail.com",
+      "password": "123456",
+      "fullname": "Mariela",
+      "celular": "995862143",
+      "birthdate": "2023-11-14",
+      "idNumber": "70685261",
+      "country": "Peru",
+      "photo": "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "user_name": "Mariela ",
+      "user_description": "hii",
+      "id": 3
     }
   ],
   "contracts": [
