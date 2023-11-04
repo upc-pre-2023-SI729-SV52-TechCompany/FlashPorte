@@ -4,10 +4,11 @@
   <div *ngFor="let contract of clientContracts">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Servicios: {{ contract.servicios }}</h5>
-        <p class="card-text">Dirección de Entrega: {{ contract.direccionEntrega }}</p>
-        <p class="card-text">Dirección de Destino: {{ contract.direccionDestino }}</p>
-        <p class="card-text">Fecha del Servicio: {{ contract.fechaServicio }}</p>
+        <h5 class="card-title"><strong>Servicios:</strong> {{ contract.servicios }}</h5>
+        <br>
+        <p class="card-text"> <strong>Dirección de Entrega:</strong> {{ contract.direccionEntrega }}</p>
+        <p class="card-text"><strong>Dirección de Destino:</strong> {{ contract.direccionDestino }}</p>
+        <p class="card-text"><strong>Fecha del Servicio:</strong> {{ contract.fechaServicio }}</p>
       </div>
     </div>
   </div>
