@@ -1,17 +1,18 @@
 {
   "companies": [
     {
+      "id": 1,
       "email": "miguel@gmail.com",
       "password": "123456",
       "fullName": "Miguel Gomez Castro",
-      "Celular": "950345876",
+      "Celular": "956054345",
       "birthdate": "1987-04-13",
       "age": "36",
       "idNumber": "08067629",
-      "country": "Lima, Perú",
+      "country": "Miraflores, Perú",
       "photo": "https://cdn2.atraccion360.com/media/aa/styles/gallerie/public/images/2019/05/chofer01.jpg",
-      "job": "Tourism Driver in \"Tourism Peru\"",
-      "time_experience": "5 years",
+      "job": "Conductor de Turismo en “Turismo Perú”",
+      "time_experience": "5",
       "license": "https://drive.google.com/file/d/1Pi4fnBZSzESUnuDvnLTGSfSIRaj0e5y-/view?usp=drive_link",
       "soat": "https://drive.google.com/file/d/1NaA6Qwe7NZmVvppqaELJYLEsk_xE4IcQ/view?usp=drive_link",
       "property_document": "https://drive.google.com/file/d/1jAf-NZ1DRHP2yic5nk4GJ6lxpdCdj3io/view?usp=drive_link",
@@ -19,8 +20,7 @@
       "photovehicle": "https://blog.reparacion-vehiculos.es/hubfs/Vehiculo%20SUV.png",
       "photovehicle2": "https://jktornel.com.mx/wp-content/uploads/2021/07/shutterstock_1383297227-e1625251386245.jpg",
       "user_name": "Miguel Gomez",
-      "user_description": "Hola, mi nombre es Miguel, tengo 36 años y me he unido a esta aplicación para ofrecer mis servicios de transporte. Como conductor, poseo un vehículo Range Rover, un automóvil que considero una combinación perfecta de lujo y capacidad todoterreno. Mi objetivo es brindar un servicio de transporte de alta calidad y comodidad a los usuarios de esta aplicación.\n\nCon mi amplia experiencia en la conducción y mi vehículo de gama alta, estoy comprometido a proporcionar un viaje seguro y cómodo para mis pasajeros. Mi Range Rover está equipado con todas las características necesarias para hacer que el trayecto sea agradable, ya sea un viaje corto por la ciudad o un desplazamiento más largo.",
-      "id": 1
+      "user_description": "Hola, mi nombre es Miguel, tengo 36 años y me he unido a esta aplicación para ofrecer mis servicios de transporte. Como conductor, poseo un vehículo Range Rover, un automóvil que considero una combinación perfecta de lujo y capacidad todoterreno. Mi objetivo es brindar un servicio de transporte de alta calidad y comodidad a los usuarios de esta aplicación.\\n\\nCon mi amplia experiencia en la conducción y mi vehículo de gama alta, estoy comprometido a proporcionar un viaje seguro y cómodo para mis pasajeros. Mi Range Rover está equipado con todas las características necesarias para hacer que el trayecto sea agradable, ya sea un viaje corto por la ciudad o un desplazamiento más largo"
     },
     {
       "email": "mariogomez@gmail.com",
@@ -32,8 +32,8 @@
       "idNumber": "71345698",
       "country": "Lima, Perú",
       "photo": "https://raw.githubusercontent.com/upc-pre-2023-SI729-SV52-TechCompany/LandingPage-V1/main/assets/img/testimonials/testimonials-3.jpg?raw=true",
-      "job": "Independient Tourism Driver in Lima",
-      "time_experience": "10 years",
+      "job": "Conductor de carga en Lima",
+      "time_experience": "10",
       "license": "https://drive.google.com/file/d/1m2ap0_doa6JD0OQcmg1nz9e13ZZMEBTp/view?usp=drive_link",
       "soat": "https://drive.google.com/file/d/1XUGL4drX_cv7ZKjY0fLtnVudZr4JZt7y/view?usp=drive_link",
       "property_document": "https://drive.google.com/file/d/1sSam4tueCEdE3tANWbiwNyQ7aJBmtjWR/view?usp=drive_link",

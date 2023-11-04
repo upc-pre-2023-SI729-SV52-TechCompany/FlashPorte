@@ -24,7 +24,7 @@
   <div class="contracts">
     <h2>Recent Contracts</h2>
       <div *ngFor="let contract of contracts" class="right-container">
-        <img [src]="getContractClientPhoto(contract)" alt="Client Photo" class="circular-image">
+        <!--<img [src]="getContractClientPhoto(contract)" alt="Client Photo" class="circular-image">-->
         <div class="contract-details">
           <h3>{{ getContractClientName(contract) }}</h3>
           <p><strong>Servicio:</strong> {{ contract.servicios }}</p>

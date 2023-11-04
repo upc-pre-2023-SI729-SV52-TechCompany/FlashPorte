@@ -3,7 +3,7 @@
     <img click="pageCompanyTable()" src="https://i.postimg.cc/j2MJ3Qb2/fastporte-logo.png" aria-label="Main page button" alt="Fast logo button" class="img-logo"/>
     <h1>FlashPorte</h1>
     <span class="spacer"></span>
-    <button mat-icon-button [matMenuTriggerFor]="userMenu">
+    <button mat-icon-button [matMenuTriggerFor]="userMenu" class="user-info">
       <img src="{{company.photo}}" alt="Worker Photo" class="worker-photo" *ngIf="company.photo" />
       <mat-icon *ngIf="!company.photo">account_circle</mat-icon>
       {{company.user_name}}
