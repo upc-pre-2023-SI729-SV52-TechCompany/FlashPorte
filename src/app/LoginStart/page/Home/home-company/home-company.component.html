@@ -12,7 +12,7 @@
     <h2>Popular Clients</h2>
       <div *ngFor="let client of clients" class="left-container">
         <div class="client-details">
-          <img src="{{ client.photo }}" alt="client" class="circular-image">
+          <!--<img src="{{ client.photo }}" alt="client" class="circular-image">-->
           <div class="info">
             <h3>{{ client.fullname }}</h3>
             <p>{{ client.email }}</p>
@@ -22,9 +22,17 @@
     </div>
   </div>
   <div class="contracts">
-    <h2>Contracts</h2>
-      <div class="right-container">
+    <h2>Recent Contracts</h2>
+      <div *ngFor="let contract of contracts" class="right-container">
+        <img [src]="getContractClientPhoto(contract)" alt="Client Photo" class="circular-image">
+        <div class="contract-details">
+          <h3>{{ getContractClientName(contract) }}</h3>
+          <p><strong>Servicio:</strong> {{ contract.servicios }}</p>
+          <p><strong>Date:</strong> {{ contract.fechaServicio }}</p>
+          <p><strong>Time:</strong> {{ contract.horaServicio }}</p>
+        </div>
       </div>
   </div>
+
 </div>
 <app-footer></app-footer>

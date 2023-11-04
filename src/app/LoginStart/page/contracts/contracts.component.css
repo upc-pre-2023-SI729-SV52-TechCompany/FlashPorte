@@ -1,53 +1,31 @@
-container{
-  font-family: Arial, sans-serif;
-}
-h2 {
-  color: #333;
-}
-form {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-.form-column {
-  width: 50%;
-  padding: 10px;
-  box-sizing: border-box;
-  margin-right: 3px; /* Espacio entre columnas */
-}
-label {
-  display: block;
-  margin-top: 10px;
-}
-input[type="text"],
-input[type="date"],
-input[type="number"],
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
+/* Agrega estos estilos en tu archivo CSS para personalizar los cards de contrato */
+
+.card {
+  margin: 10px;
+  width: 300px; /* Ancho deseado de la tarjeta */
   border: 1px solid #ccc;
   border-radius: 5px;
-}
-input[type="submit"] {
-  background-color: #0074d9;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-input[type="submit"]:hover {
-  background-color: #0056b3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.btn-primary {
-  background-color: #0004ff;
-  border: none;
-  border-radius: 20px;
-  color: #fff;
-  padding: 10px 20px;
-  cursor: pointer;
-  width: 200px;
+.card-header {
+  background-color: #007bff; /* Color de fondo del encabezado */
+  color: #fff; /* Color del texto en el encabezado */
+  padding: 10px;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 5px;
 }

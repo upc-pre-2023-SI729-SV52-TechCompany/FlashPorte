@@ -6,6 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { MatTableDataSource } from '@angular/material/table';
+import { SharedService } from "../../../services/contracts/shared.service";
 
 @Component({
   selector: 'app-searchvehicle',
@@ -22,7 +23,7 @@ export class SearchvehicleComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true})
   paginator!: MatPaginator;
 
-  constructor(private companyDataService: FastporteDataService, private router: Router) {
+  constructor(private companyDataService: FastporteDataService, private router: Router, private sharedService: SharedService) {
     this.companyData = {} as Company;
   }
 
@@ -49,6 +50,7 @@ export class SearchvehicleComponent implements OnInit {
   getRow(row: { id: any; }){
     console.log("Row clicked: ");
     console.log(row);
+    this.sharedService.selectedCompanyId = row.id;
     this.router.navigateByUrl(`/vehiclereservation/${row.id}`);
   }
 }

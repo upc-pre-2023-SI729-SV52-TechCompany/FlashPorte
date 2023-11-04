@@ -2,52 +2,50 @@
 <div class="container">
 <div class="card">
   <img src="{{company.photo}}" alt="">
-  <div class="card-info">
-    <h1>Transportista:</h1>
-    <h2>{{company.fullName}}</h2>
-    <p><strong>Trabajo:</strong>{{company.job}}</p>
-    <p><strong>Descripción:</strong>{{company.user_description}}</p>
-    <p><strong>Dirección:</strong>{{company.country}}</p>
-    <p><strong>Email:</strong> {{company.email}}</p>
+  <div class="card-info"><br>
+    <h1>Transportista:</h1><br>
+    <h2>{{company.fullName}}</h2><br>
+    <p><strong>Trabajo:</strong>{{company.job}}</p><br>
+    <p><strong>Descripción:</strong>{{company.user_description}}</p><br>
+    <p><strong>Dirección:</strong>{{company.country}}</p><br>
+    <p><strong>Email:</strong> {{company.email}}</p><br>
     <p><strong>Número de contacto:</strong> {{company.Celular}}</p>
   </div>
 </div>
 
-<!-- Formulario de reserva -->
-
 <div class="form">
-  <form id="reserva-form">
+  <form id="reserva-form" action="" method="post" [formGroup]="ContractsForm" (ngSubmit)="onSubmit()">
     <label for="fechaHoy">Fecha de hoy:</label>
-    <input type="date" id="fechaHoy" name="fechaHoy" placeholder="Ex. 2023-09-25" required><br><br>
+    <input type="date" id="fechaHoy" formControlName="fechaHoy" placeholder="Ex. 2023-09-25" required><br><br>
 
     <label for="servicios">Servicios:</label>
-    <input type="text" id="servicios" name="servicios" placeholder="Ex. Carga" required><br><br>
+    <input type="text" id="servicios" formControlName="servicios" placeholder="Ex. Carga" required><br><br>
 
     <label for="direccionEntrega">Dirección de entrega:</label>
-    <input type="text" id="direccionEntrega" name="direccionEntrega" placeholder="Ex. Monterrico" required><br><br>
+    <input type="text" id="direccionEntrega" formControlName="direccionEntrega" placeholder="Ex. Monterrico" required><br><br>
 
     <label for="direccionDestino">Dirección de destino:</label>
-    <input type="text" id="direccionDestino" name="direccionDestino" placeholder="Ex. Monterrico" required><br><br>
+    <input type="text" id="direccionDestino" formControlName="direccionDestino" placeholder="Ex. Monterrico" required><br><br>
 
     <label for="fechaServicio">Fecha cuando el servicio se lleva a cabo:</label>
-    <input type="date" id="fechaServicio" name="fechaServicio" placeholder="Ex. 2023-09-30" required><br><br>
+    <input type="date" id="fechaServicio" formControlName="fechaServicio" placeholder="Ex. 2023-09-30" required><br><br>
 
     <label for="horaServicio">Hora cuando el servicio se lleva a cabo:</label>
-    <input type="time" id="horaServicio" name="horaServicio" placeholder="Ex. 16:00" required><br><br>
+    <input type="time" id="horaServicio" formControlName="horaServicio" placeholder="Ex. 16:00" required><br><br>
 
     <label for="numeroTarjeta">Número de tarjeta de pago:</label>
-    <input type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="Ex. 0000000000000000" required><br><br>
+    <input type="text" id="numeroTarjeta" formControlName="numeroTarjeta" placeholder="Ex. 0000000000000000" required><br><br>
 
     <label for="cvvTarjeta">CVV de la tarjeta de pago:</label>
-    <input type="text" id="cvvTarjeta" name="cvvTarjeta" placeholder="000" required><br><br>
+    <input type="text" id="cvvTarjeta" formControlName="cvvTarjeta" placeholder="000" required><br><br>
 
     <label for="vencimientoTarjeta">Fecha de vencimiento de la tarjeta:</label>
-    <input type="text" id="vencimientoTarjeta" name="vencimientoTarjeta" placeholder="00/00" required><br><br>
+    <input type="text" id="vencimientoTarjeta" formControlName="vencimientoTarjeta" placeholder="00/00" required><br><br>
 
     <input type="submit" value="Realizar reserva">
   </form>
 </div>
-
+  <div id="errorMessages" class="error-messages" [innerHTML]="errorMessage">{{errorMessage}}</div>
 </div>
 
     <form  id="reseñas-form">
@@ -69,27 +67,4 @@
 
       <input type="submit" value="Enviar Reseña">
     </form>
-
-      <label for="direccionDestino">Dirección de destino:</label>
-      <input type="text" id="direccionDestino" name="direccionDestino" placeholder="Ex. Monterrico" required><br><br>
-
-      <label for="fechaServicio">Fecha cuando el servicio se lleva a cabo:</label>
-      <input type="date" id="fechaServicio" name="fechaServicio" placeholder="Ex. 2023-09-30" required><br><br>
-
-      <label for="horaServicio">Hora cuando el servicio se lleva a cabo:</label>
-      <input type="time" id="horaServicio" name="horaServicio" placeholder="Ex. 16:00" required><br><br>
-
-      <label for="numeroTarjeta">Número de tarjeta de pago:</label>
-      <input type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="Ex. 0000000000000000" required><br><br>
-
-      <label for="cvvTarjeta">CVV de la tarjeta de pago:</label>
-      <input type="text" id="cvvTarjeta" name="cvvTarjeta" placeholder="000" required><br><br>
-
-      <label for="vencimientoTarjeta">Fecha de vencimiento de la tarjeta:</label>
-      <input type="text" id="vencimientoTarjeta" name="vencimientoTarjeta" placeholder="00/00" required><br><br>
-
-      <input type="submit" value="Realizar reserva">
-    </form>
-  </div>
-</div>
 <app-footer></app-footer>

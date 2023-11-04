@@ -27,15 +27,16 @@ import { HomeClientComponent } from "./LoginStart/page/Home/home-client/home-cli
 import { ContractsComponent } from "./LoginStart/page/contracts/contracts.component";
 import { SupportClientComponent } from "./LoginStart/page/support/support-client/support-client.component";
 import { SupportCompanyComponent } from "./LoginStart/page/support/support-company/support-company.component";
+import { VehicleReservationComponent } from './LoginStart/page/vehicle-reservation/vehicle-reservation.component';
 import { ToolbarLoginComponent } from "./Public/components/toolbar-login/toolbar-login.component";
 import { ToolbarClientComponent } from "./Public/components/toolbar-profile/toolbar-client/toolbar-client.component";
 import { ToolbarCompanyComponent } from "./Public/components/toolbar-profile/toolbar-company/toolbar-company.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { SharedService } from "./services/contracts/shared.service";
 import { MatMenuModule } from "@angular/material/menu";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './Public/components/footer/footer.component';
 import { MatTabsModule } from "@angular/material/tabs";
-import { VehicleReservationComponent } from './LoginStart/page/vehicle-reservation/vehicle-reservation.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,7 @@ import { VehicleReservationComponent } from './LoginStart/page/vehicle-reservati
     RouterModule,
     MatTabsModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 
 })

@@ -1,43 +1,16 @@
 <app-toolbar-client></app-toolbar-client>
 <div class="container">
-<h2>Request Service</h2>
-  <form id="myForm" action="" method="post" [formGroup]="ContractsForm" (ngSubmit)="onSubmit()">
-  <div class="form-column">
-    <label for="from">From:</label>
-    <input type="text" formControlName="from" class="form-control" id="from">
+  <h2>Contratos del Cliente</h2>
+  <div *ngFor="let contract of clientContracts">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Servicios: {{ contract.servicios }}</h5>
+        <p class="card-text">Dirección de Entrega: {{ contract.direccionEntrega }}</p>
+        <p class="card-text">Dirección de Destino: {{ contract.direccionDestino }}</p>
+        <p class="card-text">Fecha del Servicio: {{ contract.fechaServicio }}</p>
+      </div>
+    </div>
   </div>
-  <div class="form-column">
-    <label for="type">Type:</label>
-    <input type="text" formControlName="type" id="type">
-  </div>
-  <div class="form-column">
-    <label for="date">Date:</label>
-    <input type="date" formControlName="date" id="date">
-  </div>
-  <div class="form-column">
-    <label for="to">To:</label>
-    <input type="text" formControlName="to" id="to">
-  </div>
-  <div class="form-column">
-    <label for="people">People:</label>
-    <input type="number" formControlName="people" id="people">
-  </div>
-  <div class="form-column">
-    <label for="weight">Weight (kg):</label>
-    <input type="number" formControlName="weight" id="weight">
-  </div>
-  <div class="form-column">
-    <label for="time_range">Time Range:</label>
-    <input type="text" formControlName="time_range" id="time_range">
-  </div>
-  <div class="form-column">
-    <label for="description">Description:</label><br>
-    <textarea formControlName="description" id="description" rows="4" cols="50"></textarea>
-  </div>
-  <div class="form-column">
-    <button type="submit" class="btn btn-primary">Enviar</button>
-  </div>
-</form>
-  <div id="errorMessages" class="error-messages" [innerHTML]="errorMessage">{{errorMessage}}</div>
 </div>
 <app-footer></app-footer>
+

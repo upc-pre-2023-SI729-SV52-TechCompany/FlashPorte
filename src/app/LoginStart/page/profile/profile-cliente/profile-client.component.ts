@@ -10,8 +10,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./profile-client.component.css'],
 })
 export class ProfileClientComponent implements OnInit  {
-
-
     client: any = '';
   constructor(private clientDataService: FastporteDataService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.activatedRoute.params.subscribe(

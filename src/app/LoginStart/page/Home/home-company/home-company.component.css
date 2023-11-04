@@ -1,38 +1,45 @@
+/* Estilos base */
 .home-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-left: 350px;
+  padding: 20px;
+  margin-left: 0; /* Elimina el margen izquierdo fijo */
 }
 
 .circular-image {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin-right: 20px;
+  margin: 0 0 20px 0;
 }
 
 .greeting h1 {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
+  text-align: center;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; /* Centra los elementos */
 }
 
 .left-container, .right-container {
   flex: 1;
-  padding: 20px;
+  padding: 10px; /* Reduce el relleno */
   border: 1px solid #ccc;
   margin: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   min-width: 300px;
+  max-width: 100%; /* Haz que los contenedores se adapten al ancho de la pantalla */
 }
 
 .client-details {
   display: flex;
+  flex-direction: column; /* Cambia la dirección de la disposición para que los elementos se apilen en dispositivos pequeños */
   align-items: center;
 }
 
@@ -43,11 +50,15 @@
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 16px; /* Reduce el tamaño de fuente */
   font-weight: bold;
 }
 
 p {
   font-size: 14px;
   margin: 0;
+}
+
+.contract-details{
+  text-align: center;
 }

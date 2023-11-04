@@ -45,148 +45,6 @@
       "id": 2
     }
   ],
-  "bookingHistory": [
-    {
-      "id": 1,
-      "idCompany": 2,
-      "bookingDate": "2023-07-15",
-      "pickupAddress": "Ate",
-      "destinationAddress": "Barranco",
-      "movingDate": "2023-07-25",
-      "movingTime": "08:00",
-      "status": "Finalizado",
-      "services": "Transporte, Carga, Embalaje, Montaje, Desmontaje",
-      "payment": {
-        "totalAmount": 350,
-        "paymentMethod": "Tarjeta de Crédito"
-      },
-      "hiredCompany": {
-        "name": "Transporte y mudanzas Rapi2",
-        "logo": "https://raw.githubusercontent.com/LuceroObispoRios/Grupo1_SW53/main/CargaSinEstres-V1/public-images/empresaLogo1.jpg"
-      }
-    },
-    {
-      "id": 2,
-      "idCompany": 3,
-      "bookingDate": "2023-08-16",
-      "pickupAddress": "Lince",
-      "destinationAddress": "Barranco",
-      "movingDate": "2023-08-21",
-      "movingTime": "11:30",
-      "status": "Finalizado",
-      "services": "Transporte, Carga, Embalaje",
-      "payment": {
-        "totalAmount": 250,
-        "paymentMethod": "Tarjeta de Crédito"
-      },
-      "hiredCompany": {
-        "name": "Romabe transporte",
-        "logo": "https://raw.githubusercontent.com/LuceroObispoRios/Grupo1_SW53/main/CargaSinEstres-V1/public-images/empresaLogo2.jpg"
-      }
-    },
-    {
-      "id": 3,
-      "idCompany": 4,
-      "bookingDate": "2023-09-10",
-      "pickupAddress": "Barranco",
-      "destinationAddress": "Barranco",
-      "movingDate": "2023-09-10",
-      "movingTime": "16:00",
-      "status": "Finalizado",
-      "services": "Transporte, Carga, Embalaje, Montaje, Desmontaje",
-      "payment": {
-        "totalAmount": 50,
-        "paymentMethod": "Tarjeta de Crédito"
-      },
-      "hiredCompany": {
-        "name": "Mudate Facil",
-        "logo": "https://raw.githubusercontent.com/LuceroObispoRios/Grupo1_SW53/main/CargaSinEstres-V1/public-images/empresaLogo3.png"
-      }
-    },
-    {
-      "id": 4,
-      "idCompany": 5,
-      "bookingDate": "2023-09-10",
-      "pickupAddress": "Barranco",
-      "destinationAddress": "Barranco",
-      "movingDate": "2023-09-10",
-      "movingTime": "16:00",
-      "status": "Finalizado",
-      "services": "Transporte, Carga, Embalaje, Montaje, Desmontaje",
-      "payment": {
-        "totalAmount": 350,
-        "paymentMethod": "Tarjeta de Crédito"
-      },
-      "hiredCompany": {
-        "name": "Bodegas y mudanzas Santana",
-        "logo": "https://raw.githubusercontent.com/LuceroObispoRios/Grupo1_SW53/main/CargaSinEstres-V1/public-images/empresaLogo4.png"
-      }
-    },
-    {
-      "id": 5,
-      "idCompany": 6,
-      "bookingDate": "2023-09-10",
-      "pickupAddress": "Barranco",
-      "destinationAddress": "Barranco",
-      "movingDate": "2023-09-10",
-      "movingTime": "16:00",
-      "status": "En curso",
-      "services": "Transporte, Carga, Embalaje, Montaje, Desmontaje",
-      "payment": {
-        "totalAmount": 350,
-        "paymentMethod": "Tarjeta de Crédito"
-      },
-      "hiredCompany": {
-        "name": "Practi Mudanza",
-        "logo": "https://raw.githubusercontent.com/LuceroObispoRios/Grupo1_SW53/main/CargaSinEstres-V1/public-images/empresaLogo5.png"
-      }
-    },
-    {
-      "id": 6,
-      "idCompany": 7,
-      "bookingDate": "2023-09-10",
-      "pickupAddress": "Barranco",
-      "destinationAddress": "Barranco",
-      "movingDate": "2023-09-10",
-      "movingTime": "16:00",
-      "status": "En curso",
-      "services": "Transporte, Carga, Embalaje, Montaje, Desmontaje",
-      "payment": {
-        "totalAmount": 350,
-        "paymentMethod": "Tarjeta de Crédito"
-      },
-      "hiredCompany": {
-        "name": "Mudanzas Jurado",
-        "logo": "https://raw.githubusercontent.com/LuceroObispoRios/Grupo1_SW53/main/CargaSinEstres-V1/public-images/empresaLogo6.png"
-      }
-    },
-    {
-      "id": 7,
-      "idCompany": 8,
-      "bookingDate": "2023-09-10",
-      "pickupAddress": "Barranco",
-      "destinationAddress": "Barranco",
-      "movingDate": "2023-09-10",
-      "movingTime": "16:00",
-      "status": "En curso",
-      "services": "Transporte, Carga, Embalaje",
-      "payment": {
-        "totalAmount": 350,
-        "paymentMethod": "Tarjeta de Crédito"
-      },
-      "hiredCompany": {
-        "name": "Mudanzas Plata",
-        "logo": "https://raw.githubusercontent.com/LuceroObispoRios/Grupo1_SW53/main/CargaSinEstres-V1/public-images/empresaLogo7.png"
-      }
-    }
-  ],
-  "chat": [
-    {
-      "id": 1,
-      "message": "Primer mensaje",
-      "dateTime": "2019-10-10 10:10:10"
-    }
-  ],
   "clients": [
     {
       "id": 1,
@@ -213,155 +71,36 @@
       "user_name": "Mateo Lopez",
       "user_description": "Hola, mi nombre es Mateo, y tengo 43 años. Soy un cliente que valora mucho la eficiencia y la tranquilidad en los servicios de transporte. Como emprendedor, gestiono un negocio de comercio electrónico y, en consecuencia, la logística de mis productos es esencial para mi operación. FastPorte me ha llamado la atención por su reputación de confiabilidad y su historial probado en el transporte eficiente de mercancías. Además, aprecio la flexibilidad que ofrecen para adaptarse a mis necesidades específicas, ya que, en ocasiones, requiero entregas programadas o características adicionales para ciertos envíos.",
       "id": 2
-    },
-    {
-      "email": "mariela@gmail.com",
-      "password": "123456",
-      "fullname": "Mariela",
-      "celular": "995862143",
-      "birthdate": "2023-11-14",
-      "idNumber": "70685261",
-      "country": "Peru",
-      "photo": "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "user_name": "Mariela ",
-      "user_description": "hii",
-      "id": 3
-    },
-    {
-      "email": "mariela@gmail.com",
-      "password": "123456",
-      "fullname": "Mariela",
-      "celular": "995862143",
-      "birthdate": "2023-10-31",
-      "idNumber": "70685261",
-      "country": "Peru",
-      "photo": "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "user_name": "Mariela ",
-      "user_description": "gjnjt",
-      "id": 4
     }
   ],
   "contracts": [
     {
-      "from": "La Victoria, Lima",
-      "type": "Turismo",
-      "date": "2023-11-04",
-      "to": "Barranco",
-      "people": 5,
-      "weight": 20,
-      "time_range": "10:00 am - 12:00 am",
-      "description": "Hola, requiero sus servicios",
+      "clientId": "1",
+      "companyId": 1,
+      "fechaHoy": "2023-11-04",
+      "servicios": "Turismo",
+      "direccionEntrega": "Monterrico",
+      "direccionDestino": "Miraflores",
+      "fechaServicio": "2023-11-11",
+      "horaServicio": "10:00",
+      "numeroTarjeta": "1234567890123456",
+      "cvvTarjeta": "123",
+      "vencimientoTarjeta": "23/25",
       "id": 1
     },
     {
-      "from": "Chorrillos",
-      "type": "Taxi",
-      "date": "2023-11-08",
-      "to": "Santa Anita",
-      "people": 1,
-      "weight": 1,
-      "time_range": "12",
-      "description": "1.2}",
+      "clientId": "2",
+      "companyId": 2,
+      "fechaHoy": "2023-11-04",
+      "servicios": "Carga",
+      "direccionEntrega": "Miraflores",
+      "direccionDestino": "Santa Anita",
+      "fechaServicio": "2023-11-07",
+      "horaServicio": "11:00",
+      "numeroTarjeta": "1234567890123456",
+      "cvvTarjeta": "123",
+      "vencimientoTarjeta": "23/25",
       "id": 2
-    },
-    {
-      "from": "Chorrillos",
-      "type": "Taxi",
-      "date": "2023-11-08",
-      "to": "Santa Anita",
-      "people": 1,
-      "weight": 1,
-      "time_range": "12",
-      "description": "1.2}",
-      "id": 3
-    },
-    {
-      "from": "Chorrillos",
-      "type": "Taxi",
-      "date": "2023-11-08",
-      "to": "Santa Anita",
-      "people": 1,
-      "weight": 1,
-      "time_range": "12",
-      "description": "1.2}",
-      "id": 4
-    },
-    {
-      "from": "Chorrillos",
-      "type": "Taxi",
-      "date": "2023-11-08",
-      "to": "Santa Anita",
-      "people": 1,
-      "weight": 1,
-      "time_range": "12",
-      "description": "1.2}",
-      "id": 5
-    },
-    {
-      "from": "Chorrillos",
-      "type": "Taxi",
-      "date": "2023-11-08",
-      "to": "Santa Anita",
-      "people": 1,
-      "weight": 1,
-      "time_range": "12",
-      "description": "1.2}",
-      "id": 6
-    },
-    {
-      "from": "Chorrillos",
-      "type": "Taxi",
-      "date": "2023-11-08",
-      "to": "Santa Anita",
-      "people": 1,
-      "weight": 1,
-      "time_range": "12",
-      "description": "1.2}",
-      "id": 7
-    },
-    {
-      "from": "Chorrillos",
-      "type": "Taxi",
-      "date": "2023-11-08",
-      "to": "Santa Anita",
-      "people": 1,
-      "weight": 1,
-      "time_range": "12",
-      "description": "1.2}",
-      "id": 8
-    },
-    {
-      "from": "Chorrillos",
-      "type": "Taxi",
-      "date": "2023-11-08",
-      "to": "Santa Anita",
-      "people": 1,
-      "weight": 1,
-      "time_range": "12",
-      "description": "1.2}",
-      "id": 9
-    },
-    {
-      "from": "Chorrillos",
-      "type": "Taxi",
-      "date": "2023-11-08",
-      "to": "Santa Anita",
-      "people": 1,
-      "weight": 1,
-      "time_range": "12",
-      "description": "1.2}",
-      "id": 10
-    },
-    {
-      "from": "Chorrillos",
-      "type": "Taxi",
-      "date": "2023-11-08",
-      "to": "Santa Anita",
-      "people": 1,
-      "weight": 1,
-      "time_range": "12",
-      "description": "1.2}",
-      "id": 11
     }
   ]
 }
