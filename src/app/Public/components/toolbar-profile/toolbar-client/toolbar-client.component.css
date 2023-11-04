@@ -6,17 +6,16 @@
 
 .user-info {
   display: flex;
-  align-items: center; /* Centra verticalmente el contenido en el contenedor */
+  align-items: center;
   margin-left: 1000px;
 }
 
-/* Update the font size for the user's full name */
 .mat-toolbar .user-full-name {
   color: white;
-  font-size: 14px; /* Increase or decrease the font size as needed */
-  white-space: nowrap; /* Prevent the full name from wrapping */
+  font-size: 14px;
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Add an ellipsis if the name is too long */
+  text-overflow: ellipsis;
 }
 
 a{
@@ -66,4 +65,10 @@ mat-toolbar {
 
 .toolbar-btn-logout:hover {
   background-color: #b5b3b3;
+}
+
+.worker-photo{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }

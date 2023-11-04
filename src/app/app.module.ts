@@ -27,16 +27,13 @@ import { HomeClientComponent } from "./LoginStart/page/Home/home-client/home-cli
 import { ContractsComponent } from "./LoginStart/page/contracts/contracts.component";
 import { SupportClientComponent } from "./LoginStart/page/support/support-client/support-client.component";
 import { SupportCompanyComponent } from "./LoginStart/page/support/support-company/support-company.component";
-import { LandingPageComponent } from "./Public/components/landing-page/landing-page.component";
 import { ToolbarLoginComponent } from "./Public/components/toolbar-login/toolbar-login.component";
-import { ToolbarLandingComponent } from "./Public/components/toolbar-landing/toolbar-landing.component";
 import { ToolbarClientComponent } from "./Public/components/toolbar-profile/toolbar-client/toolbar-client.component";
 import { ToolbarCompanyComponent } from "./Public/components/toolbar-profile/toolbar-company/toolbar-company.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { MatMenuModule } from "@angular/material/menu";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FooterPrincipalComponent } from './Public/components/footer/footer-principal/footer-principal.component';
-import { FooterStartComponent } from "./Public/components/footer/footer-start/footer-start.component";
+import { FooterComponent } from './Public/components/footer/footer.component';
 import { MatTabsModule } from "@angular/material/tabs";
 import { VehicleReservationComponent } from './LoginStart/page/vehicle-reservation/vehicle-reservation.component';
 
@@ -63,13 +60,10 @@ import { VehicleReservationComponent } from './LoginStart/page/vehicle-reservati
     ContractsComponent,
     SupportClientComponent,
     SupportCompanyComponent,
-    LandingPageComponent,
     ToolbarLoginComponent,
-    ToolbarLandingComponent,
     ToolbarClientComponent,
     ToolbarCompanyComponent,
-    FooterPrincipalComponent,
-    FooterStartComponent,
+    FooterComponent,
     VehicleReservationComponent
   ],
   imports: [

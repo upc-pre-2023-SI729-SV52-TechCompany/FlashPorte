@@ -20,11 +20,11 @@ export class CompanySettingsComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmarpassword: ['', Validators.required],
-      fullname: ['', Validators.required],
+      fullName: ['', Validators.required],
       birthdate: ['', Validators.required],
       age: ['', [Validators.required, Validators.pattern(/^\d+$/)]],
       idNumber: ['', [Validators.required, Validators.pattern(/^\d+$/)]],
-      celular: ['', [Validators.required, Validators.pattern(/^\d+$/)]],
+      Celular: ['', [Validators.required, Validators.pattern(/^\d+$/)]],
       country: ['', Validators.required],
       photo: ['', Validators.required],
       job: ['', Validators.required],
@@ -50,7 +50,7 @@ export class CompanySettingsComponent {
     const formData = this.userSettingsForm.value;
     let warnings = '';
 
-    if (!formData.fullname) {
+    if (!formData.fullName) {
       warnings += 'El nuevo nombre no puede estar vacío.<br>';
     }
 
@@ -62,7 +62,7 @@ export class CompanySettingsComponent {
       warnings += 'El nuevo Identify Card debe contener solo dígitos enteros.<br>';
     }
 
-    if (!formData.celular || !/^\d+$/.test(formData.celular)) {
+    if (!formData.Celular || !/^\d+$/.test(formData.Celular)) {
       warnings += 'El nuevo celular debe contener solo dígitos enteros.<br>';
     }
 
@@ -137,8 +137,8 @@ export class CompanySettingsComponent {
         id: this.id,
         email: formData.email,
         password: formData.password,
-        fullname: formData.fullname,
-        celular: formData.celular,
+        fullName: formData.fullname,
+        Celular: formData.celular,
         birthdate: formData.birthdate,
         age: formData.age,
         idNumber: formData.idNumber,

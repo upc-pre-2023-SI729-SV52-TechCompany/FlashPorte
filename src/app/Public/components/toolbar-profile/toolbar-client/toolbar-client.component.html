@@ -1,12 +1,13 @@
 <div class="toolbar-section">
   <mat-toolbar>
     <img click="pageCompanyTable()" src="https://i.postimg.cc/j2MJ3Qb2/fastporte-logo.png" aria-label="Main page button" alt="Carga logo button" class="img-logo"/>
-    <h1>FastPorte</h1>
+    <h1>FlashPorte</h1>
     <div class="user-info">
-    <button mat-icon-button [matMenuTriggerFor]="userMenu">
-      <mat-icon>account_circle</mat-icon>
-      {{ userFullName }}
-    </button>
+      <button mat-icon-button [matMenuTriggerFor]="userMenu">
+        <img src="{{client.photo}}" alt="Worker Photo" class="worker-photo" *ngIf="client.photo" />
+        <mat-icon *ngIf="!client.photo">account_circle</mat-icon>
+        {{client.user_name}}
+      </button>
     </div>
     <mat-menu #userMenu="matMenu">
       <button mat-menu-item (click)="pageHome()">Home</button>

@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import { MatMenu } from '@angular/material/menu';
+import {FastporteDataService} from "../../../../services/fastporte-data.service";
 
 @Component({
   selector: 'app-toolbar-company',
@@ -10,9 +11,28 @@ import { MatMenu } from '@angular/material/menu';
 
 export class ToolbarCompanyComponent {
 
-  userFullName = 'User Full Name';
+  company: any = '';
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private companyDataService: FastporteDataService, private router: Router, private route: ActivatedRoute, private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.params.subscribe(
+      params => {
+        this.getCompany(params['id']);
+      }
+    );
+  }
+
+  getCompany(id: any) {
+    this.companyDataService.getCompanyById(id).subscribe(
+      (res: any) =>
+      {
+        console.log("Company detail:", (res[id-1]));
+        this.company = res[id-1];
+      },
+      err => {
+        console.log("Error:", err);
+      }
+    );
+  }
 
   pageHome(){
     const companyId = this.route.snapshot.params['id'];

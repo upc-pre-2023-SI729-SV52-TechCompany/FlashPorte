@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { MatMenu } from '@angular/material/menu';
+import {FastporteDataService} from "../../../../services/fastporte-data.service";
 
 @Component({
   selector: 'app-toolbar-client',
@@ -11,9 +12,28 @@ import { MatMenu } from '@angular/material/menu';
 
 export class ToolbarClientComponent {
 
-  userFullName = 'User Full Name';
+  client: any = '';
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private clientDataService: FastporteDataService, private router: Router, private route: ActivatedRoute, private activatedRoute: ActivatedRoute) {
+    this.activatedRoute.params.subscribe(
+      params => {
+        this.getClient(params['id']);
+      }
+    );
+  }
+
+  getClient(id: any) {
+    this.clientDataService.getClientById(id).subscribe(
+      (res: any) =>
+      {
+        console.log("Client detail:", (res[id-1]));
+        this.client = res[id-1];
+      },
+      err => {
+        console.log("Error:", err);
+      }
+    );
+  }
 
   pageHome() {
     const clientId = this.route.snapshot.params['id'];
