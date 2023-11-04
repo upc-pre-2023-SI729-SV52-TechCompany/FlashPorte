@@ -1,19 +1,24 @@
 <div class="toolbar-section">
   <mat-toolbar>
-    <img click="pageCompanyTable()" src="https://i.postimg.cc/j2MJ3Qb2/fastporte-logo.png" aria-label="Main page button" alt="Fast logo button" class="img-logo"/>
-    <h1>FlashPorte</h1>
-    <span class="spacer"></span>
-    <button mat-icon-button [matMenuTriggerFor]="userMenu" class="user-info">
-      <img src="{{company.photo}}" alt="Worker Photo" class="worker-photo" *ngIf="company.photo" />
-      <mat-icon *ngIf="!company.photo">account_circle</mat-icon>
-      {{company.user_name}}
-    </button>
-    <mat-menu #userMenu="matMenu">
-      <button mat-menu-item (click)="pageHome()">Home</button>
-      <button mat-menu-item (click)="pageProfile()">My Profile</button>
-      <!--<button mat-menu-item (click)="pageContracts()">Contracts</button>-->
-      <button mat-menu-item (click)="pageSupport()">Support</button>
-      <button mat-menu-item (click)="pageLogOut()">LogOut</button>
-    </mat-menu>
+    <div class="logo-and-title">
+      <img src="https://i.postimg.cc/j2MJ3Qb2/fastporte-logo.png" aria-label="Main page button" alt="Fast logo button" class="img-logo" />
+      <h1>FlashPorte</h1>
+    </div>
+    <div class="user-info">
+      <button mat-icon-button [matMenuTriggerFor]="userMenu" class="user-info-button">
+        <div class="user-info-content">
+        <img src="{{company.photo}}" alt="Worker Photo" class="worker-photo" *ngIf="company.photo"/>
+        <mat-icon *ngIf="!company.photo">account_circle</mat-icon>
+        <div class="user-name"> {{company.user_name}}</div>
+        </div>
+      </button>
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="pageHome()">Home</button>
+        <button mat-menu-item (click)="pageProfile()">My Profile</button>
+        <!--<button mat-menu-item (click)="pageContracts()">Contracts</button>-->
+        <button mat-menu-item (click)="pageSupport()">Support</button>
+        <button mat-menu-item (click)="pageLogOut()">LogOut</button>
+      </mat-menu>
+    </div>
   </mat-toolbar>
 </div>
