@@ -1,7 +1,9 @@
 <app-toolbar-client></app-toolbar-client>
-<div class="container">
+<div class="container" style="margin-bottom: 20px;">
+  <br><br><br>
   <h2>Contratos del Cliente</h2>
   <div *ngFor="let contract of clientContracts">
+    <br><br><br>
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Servicios: {{ contract.servicios }}</h5>
@@ -11,6 +13,6 @@
       </div>
     </div>
   </div>
-</div>
+</div><br><br><br><br><br>
 <app-footer></app-footer>
 

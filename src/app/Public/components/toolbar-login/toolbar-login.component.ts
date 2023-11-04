@@ -10,12 +10,4 @@ import { Router } from '@angular/router';
 export class ToolbarLoginComponent {
 
     constructor(private router: Router) { }
-
-    pageUs(){
-        this.router.navigateByUrl('/#');
-    }
-
-    pageAboutUs(){
-        this.router.navigateByUrl('/#');
-    }
 }
