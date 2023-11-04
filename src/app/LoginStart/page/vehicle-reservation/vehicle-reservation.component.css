@@ -1,167 +1,199 @@
-
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
-}
-
-.card {
-  background-color: #5ED6AD;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 300px;
-  text-align: left;
-  border-radius: 5px;
   padding: 10px;
-  color: #fff;
 }
 
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+.app-toolbar-client {
+  /* Estilos para tu barra de herramientas */
 }
 
-.card-info p {
-  font-size: 15px;
-  color: black;
-  margin: 10px 10px;
-}
-
-p {
-  text-align: left;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-}
-
-.formulario-container {
-  position: fixed;
-  bottom: 0;
-  right: 10px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-height: 50px;
-  overflow: hidden;
-  transition: max-height 0.4s;
-}
-
-.formulario-content {
-  display: none;
+.content {
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
 }
 
-.formulario-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  cursor: pointer;
+.card {
+  width: 25%; /* Ajusta el ancho según tus necesidades */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-right: 10px; /* Espacio entre el card y el formulario */
 }
 
-.formulario-title h2 {
-  margin: 0;
+.card img {
+  max-width: 100%;
+  height: auto;
 }
 
-.formulario-content.active {
-  display: block;
-}
-
-.formulario-container.active {
-  max-height: 500px;
-}
-
-#formularioOculto {
-  display: none;
-}
-
-#iconoFormulario {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
-/* Estilos para el contenedor de reseñas */
-.reseñas-container {
-  border: 1px solid #ccc;
-  margin: 10px;
-  padding: 10px;
-}
-
-/* Estilos para el título de reseñas */
-.reseñas-title {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #eee;
-  padding: 10px;
-}
-
-/* Estilos para el contenido de reseñas */
-.reseñas-content {
-  display: none; /* Inicialmente oculto */
-  padding: 10px;
-}
-
-/* Estilo para mostrar el contenido cuando tiene la clase 'active' */
-.reseñas-content.active {
-  display: block;
-}
-
-/* Estilos para el formulario */
-#reseñas-form {
+.card-info {
   margin-top: 10px;
 }
 
-/* Estilos para los campos del formulario */
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="number"],
-textarea {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 10px;
-}
-
-/* Estilos para el botón de enviar */
-input[type="submit"] {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #0056b3;
-}
-/*/////////////////////////////////////////////////////////////////////
-/* Estilos para el sistema de calificación en estrellas */
-.rating {
+.card-info h1 {
   font-size: 24px;
+  font-weight: bold;
+  margin: 0;
 }
 
-.star {
+.card-info h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.card-info p {
+  margin: 5px 0;
+}
+
+.form {
+  width: 25%; /* Ajusta el ancho según tus necesidades */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form .rating {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.form-content{
+  margin: 2px;
+}
+/* Estilos adicionales y personalización según tus preferencias */
+/* Estilos para el formulario */
+.form-content {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 400px; /* Ancho máximo personalizado */
+  margin: 0 auto; /* Centra el formulario en el centro de la página */
+}
+
+.form-content label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.form-content input[type="text"],
+.form-content input[type="date"],
+.form-content input[type="time"],
+.form-content input[type="number"],
+.form-content input[type="password"],
+.form-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-content input[type="submit"] {
+  background-color: #007BFF; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
-.star:hover,
-.star.active {
-  color: #FFD700; /* Color de las estrellas cuando se pasa el cursor o está activa */
+.formulario-content input[type="submit"]:hover {
+  background-color: #0056b3; /* Cambia el color de fondo en el hover */
+}
+
+/* Estilos adicionales y personalización según tus preferencias */
+
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card {
+  width: 45%; /* Ajusta el ancho según tus necesidades */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-right: 10px; /* Espacio entre el card y el formulario */
+}
+
+.form {
+  width: 45%; /* Ajusta el ancho según tus necesidades */
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/*/////////////////////////////////////////////////////////////*/
+
+#reseñas-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#reseñas-form label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+#reseñas-form input[type="text"],
+#reseñas-form input[type="date"],
+#reseñas-form input[type="time"],
+#reseñas-form input[type="number"],
+#reseñas-form input[type="password"],
+#reseñas-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+#reseñas-form .rating {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+#reseñas-form .star {
+  cursor: pointer;
+  color: #ffcc00; /* Color de las estrellas no seleccionadas */
 }
 
 
+
+#reseñas-form input[type="submit"] {
+  background-color: #007BFF; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#reseñas-form input[type="submit"]:hover {
+  background-color: #0056b3; /* Cambia el color de fondo en el hover */
+}

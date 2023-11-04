@@ -226,6 +226,19 @@
       "user_name": "Mariela ",
       "user_description": "hii",
       "id": 3
+    },
+    {
+      "email": "mariela@gmail.com",
+      "password": "123456",
+      "fullname": "Mariela",
+      "celular": "995862143",
+      "birthdate": "2023-10-31",
+      "idNumber": "70685261",
+      "country": "Peru",
+      "photo": "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "user_name": "Mariela ",
+      "user_description": "gjnjt",
+      "id": 4
     }
   ],
   "contracts": [
@@ -239,6 +252,116 @@
       "time_range": "10:00 am - 12:00 am",
       "description": "Hola, requiero sus servicios",
       "id": 1
+    },
+    {
+      "from": "Chorrillos",
+      "type": "Taxi",
+      "date": "2023-11-08",
+      "to": "Santa Anita",
+      "people": 1,
+      "weight": 1,
+      "time_range": "12",
+      "description": "1.2}",
+      "id": 2
+    },
+    {
+      "from": "Chorrillos",
+      "type": "Taxi",
+      "date": "2023-11-08",
+      "to": "Santa Anita",
+      "people": 1,
+      "weight": 1,
+      "time_range": "12",
+      "description": "1.2}",
+      "id": 3
+    },
+    {
+      "from": "Chorrillos",
+      "type": "Taxi",
+      "date": "2023-11-08",
+      "to": "Santa Anita",
+      "people": 1,
+      "weight": 1,
+      "time_range": "12",
+      "description": "1.2}",
+      "id": 4
+    },
+    {
+      "from": "Chorrillos",
+      "type": "Taxi",
+      "date": "2023-11-08",
+      "to": "Santa Anita",
+      "people": 1,
+      "weight": 1,
+      "time_range": "12",
+      "description": "1.2}",
+      "id": 5
+    },
+    {
+      "from": "Chorrillos",
+      "type": "Taxi",
+      "date": "2023-11-08",
+      "to": "Santa Anita",
+      "people": 1,
+      "weight": 1,
+      "time_range": "12",
+      "description": "1.2}",
+      "id": 6
+    },
+    {
+      "from": "Chorrillos",
+      "type": "Taxi",
+      "date": "2023-11-08",
+      "to": "Santa Anita",
+      "people": 1,
+      "weight": 1,
+      "time_range": "12",
+      "description": "1.2}",
+      "id": 7
+    },
+    {
+      "from": "Chorrillos",
+      "type": "Taxi",
+      "date": "2023-11-08",
+      "to": "Santa Anita",
+      "people": 1,
+      "weight": 1,
+      "time_range": "12",
+      "description": "1.2}",
+      "id": 8
+    },
+    {
+      "from": "Chorrillos",
+      "type": "Taxi",
+      "date": "2023-11-08",
+      "to": "Santa Anita",
+      "people": 1,
+      "weight": 1,
+      "time_range": "12",
+      "description": "1.2}",
+      "id": 9
+    },
+    {
+      "from": "Chorrillos",
+      "type": "Taxi",
+      "date": "2023-11-08",
+      "to": "Santa Anita",
+      "people": 1,
+      "weight": 1,
+      "time_range": "12",
+      "description": "1.2}",
+      "id": 10
+    },
+    {
+      "from": "Chorrillos",
+      "type": "Taxi",
+      "date": "2023-11-08",
+      "to": "Santa Anita",
+      "people": 1,
+      "weight": 1,
+      "time_range": "12",
+      "description": "1.2}",
+      "id": 11
     }
   ]
 }

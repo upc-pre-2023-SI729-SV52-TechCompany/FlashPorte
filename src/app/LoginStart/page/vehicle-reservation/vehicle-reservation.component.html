@@ -1,4 +1,5 @@
 <app-toolbar-client></app-toolbar-client>
+<div class="container">
 <div class="card">
   <img src="{{company.photo}}" alt="">
   <div class="card-info">
@@ -12,15 +13,45 @@
   </div>
 </div>
 
-<!-- Reseñas del transportista -->
-<div class="formulario-container" [ngClass]="{ 'active': mostrarElement }">
-  <div class="formulario-title" (click)="toggleElement()">
-    <h2>Formulario de Reseña</h2>
-    <div>{{ mostrarElement ? '▼' : '▲' }}</div>
-  </div>
-  <div class="formulario-content" [ngClass]="{ 'active': mostrarElement }">
-    <form (ngSubmit)="enviarResenia()" id="reseñas-form">
-      <label for="nombreUsuario">Nombre de usuario:</label>
+<!-- Formulario de reserva -->
+
+<div class="form">
+  <form id="reserva-form">
+    <label for="fechaHoy">Fecha de hoy:</label>
+    <input type="date" id="fechaHoy" name="fechaHoy" placeholder="Ex. 2023-09-25" required><br><br>
+
+    <label for="servicios">Servicios:</label>
+    <input type="text" id="servicios" name="servicios" placeholder="Ex. Carga" required><br><br>
+
+    <label for="direccionEntrega">Dirección de entrega:</label>
+    <input type="text" id="direccionEntrega" name="direccionEntrega" placeholder="Ex. Monterrico" required><br><br>
+
+    <label for="direccionDestino">Dirección de destino:</label>
+    <input type="text" id="direccionDestino" name="direccionDestino" placeholder="Ex. Monterrico" required><br><br>
+
+    <label for="fechaServicio">Fecha cuando el servicio se lleva a cabo:</label>
+    <input type="date" id="fechaServicio" name="fechaServicio" placeholder="Ex. 2023-09-30" required><br><br>
+
+    <label for="horaServicio">Hora cuando el servicio se lleva a cabo:</label>
+    <input type="time" id="horaServicio" name="horaServicio" placeholder="Ex. 16:00" required><br><br>
+
+    <label for="numeroTarjeta">Número de tarjeta de pago:</label>
+    <input type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="Ex. 0000000000000000" required><br><br>
+
+    <label for="cvvTarjeta">CVV de la tarjeta de pago:</label>
+    <input type="text" id="cvvTarjeta" name="cvvTarjeta" placeholder="000" required><br><br>
+
+    <label for="vencimientoTarjeta">Fecha de vencimiento de la tarjeta:</label>
+    <input type="text" id="vencimientoTarjeta" name="vencimientoTarjeta" placeholder="00/00" required><br><br>
+
+    <input type="submit" value="Realizar reserva">
+  </form>
+</div>
+
+</div>
+
+    <form  id="reseñas-form">
+      <label >Nombre de usuario:</label>
       <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Escribe tu nombre de usuario" required [(ngModel)]="nombreUsuario"><br><br>
 
       <label for="calificacion">Calificación:</label>
@@ -38,46 +69,8 @@
 
       <input type="submit" value="Enviar Reseña">
     </form>
-  </div>
-</div>
 
-<!-- Formulario de reserva -->
-<div class="formulario-container" [ngClass]="{ 'active': mostrarFormulario }">
-  <div class="formulario-title" (click)="toggleFormulario()">
-    <h2>Formulario de Reserva</h2>
-    <div>{{ mostrarFormulario ? '▼' : '▲' }}</div>
-  </div>
-  <div class="formulario-content" [ngClass]="{ 'active': mostrarFormulario }">
-    <form (ngSubmit)="realizarReserva()" id="reserva-form">
-      <label for="fechaHoy">Fecha de hoy:</label>
-      <input type="date" id="fechaHoy" name="fechaHoy" placeholder="Ex. 2023-09-25" required><br><br>
 
-      <label for="servicios">Servicios:</label>
-      <input type="text" id="servicios" name="servicios" placeholder="Ex. Carga" required><br><br>
 
-      <label for="direccionEntrega">Dirección de entrega:</label>
-      <input type="text" id="direccionEntrega" name="direccionEntrega" placeholder="Ex. Monterrico" required><br><br>
 
-      <label for="direccionDestino">Dirección de destino:</label>
-      <input type="text" id="direccionDestino" name="direccionDestino" placeholder="Ex. Monterrico" required><br><br>
-
-      <label for="fechaServicio">Fecha cuando el servicio se lleva a cabo:</label>
-      <input type="date" id="fechaServicio" name="fechaServicio" placeholder="Ex. 2023-09-30" required><br><br>
-
-      <label for="horaServicio">Hora cuando el servicio se lleva a cabo:</label>
-      <input type="time" id="horaServicio" name="horaServicio" placeholder="Ex. 16:00" required><br><br>
-
-      <label for="numeroTarjeta">Número de tarjeta de pago:</label>
-      <input type="text" id="numeroTarjeta" name="numeroTarjeta" placeholder="Ex. 0000000000000000" required><br><br>
-
-      <label for="cvvTarjeta">CVV de la tarjeta de pago:</label>
-      <input type="text" id="cvvTarjeta" name="cvvTarjeta" placeholder="000" required><br><br>
-
-      <label for="vencimientoTarjeta">Fecha de vencimiento de la tarjeta:</label>
-      <input type="text" id="vencimientoTarjeta" name="vencimientoTarjeta" placeholder="00/00" required><br><br>
-
-      <input type="submit" value="Realizar reserva">
-    </form>
-  </div>
-</div>
 <app-footer-principal></app-footer-principal>
