@@ -1,4 +1,9 @@
+.container {
+  /* No es necesario agregar ninguna propiedad que afecte la dirección de los elementos, como display: flex o flex-direction. */
+}
+
 .contract-card {
+  display: inline-block; /* Muestra los elementos en línea horizontal */
   margin: 10px;
   width: 400px; /* Ancho deseado de la tarjeta */
   height: 300px; /* Altura deseada de la tarjeta */
@@ -9,6 +14,7 @@
 }
 
 .h1 {
+  display: inline-block;
   margin-left: 20px;
   font-size: 32px;
 }
