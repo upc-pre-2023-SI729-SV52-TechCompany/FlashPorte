@@ -84,7 +84,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   max-width: 400px; /* Ancho máximo personalizado */
-  margin: 0 auto; /* Centra el formulario en el centro de la página */
+  margin: 0 auto;
 }
 
 .form-content label {
@@ -166,7 +166,7 @@ body {
 #reseñas-form input[type="number"],
 #reseñas-form input[type="password"],
 #reseñas-form textarea {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   margin-top: 5px;
   border: 1px solid #ccc;
