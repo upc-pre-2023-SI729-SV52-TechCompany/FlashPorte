@@ -62,7 +62,15 @@
       </div>
     </div>
       <div *ngIf="showComments">
-
+        <div class="reviews-details">
+        <div *ngFor="let review of reviews">
+            <div class="info">
+              <h3>{{ review. nombreUsuario}}</h3>
+              <p><strong>Calificación:</strong> {{ review.calificacion }}</p>
+              <p><strong>Reseña:</strong> {{ review.resenia }}</p>
+            </div>
+          </div>
+        </div>
     </div>
   </div>
     </div>
