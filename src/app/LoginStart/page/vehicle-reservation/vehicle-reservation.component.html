@@ -15,6 +15,12 @@
 
 <div class="form">
   <form id="reserva-form" action="" method="post" [formGroup]="ContractsForm" (ngSubmit)="onSubmit()">
+    <label for="nombre">Nombre del que reserva:</label>
+    <input type="text" id="nombre" formControlName="nombre" placeholder="Ex. Juan Lopez" required><br><br>
+
+    <label for="foto">Foto:</label>
+    <input type="text" id="foto" formControlName="foto" placeholder="Ex. Link de Foto" required><br><br>
+
     <label for="fechaHoy">Fecha de hoy:</label>
     <input type="date" id="fechaHoy" formControlName="fechaHoy" placeholder="Ex. 2023-09-25" required><br><br>
 
@@ -47,10 +53,10 @@
 </div>
   <div id="errorMessages" class="error-messages" [innerHTML]="errorMessage">{{errorMessage}}</div>
 </div>
-
-    <form  id="reseñas-form">
+<div class="review">
+    <form  id="reseñas-form" action="" method="post" [formGroup]="ReviewsForm" (ngSubmit)="onReviewSubmit()">
       <label >Nombre de usuario:</label>
-      <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Escribe tu nombre de usuario" required [(ngModel)]="nombreUsuario"><br><br>
+      <input type="text" id="nombreUsuario" formControlName="nombreUsuario" placeholder="Escribe tu nombre de usuario" required [(ngModel)]="nombreUsuario"><br><br>
 
       <label for="calificacion">Calificación:</label>
       <div class="rating">
@@ -60,11 +66,11 @@
         <span class="star" (click)="setRating(4)">&#9733;</span>
         <span class="star" (click)="setRating(5)">&#9733;</span>
       </div>
-      <input type="hidden" id="calificacion" name="calificacion" value="0" required [(ngModel)]="calificacion">
+      <input type="hidden" id="calificacion" formControlName="calificacion" value="0" required [(ngModel)]="calificacion">
 
       <label for="resenia">Reseña:</label>
-      <textarea id="resenia" name="resenia" placeholder="Escribe tu reseña" required [(ngModel)]="resenia"></textarea><br><br>
-
+      <textarea id="resenia" formControlName="resenia" placeholder="Escribe tu reseña" required [(ngModel)]="resenia"></textarea><br><br>
       <input type="submit" value="Enviar Reseña">
     </form>
+</div>
 <app-footer></app-footer>

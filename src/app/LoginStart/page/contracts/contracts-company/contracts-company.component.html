@@ -1,0 +1,44 @@
+<app-toolbar-company></app-toolbar-company>
+<div class="container" style="margin-bottom: 20px;">
+  <br><br><br>
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Recent Contracts</h1>
+      <div *ngFor="let contract of contracts" class="contract-card"><br>
+        <h1 class="card-title"><strong>Servicios:</strong> {{ contract.servicios }}</h1><br>
+        <p class="card-text"> <strong>Dirección de Entrega:</strong> {{ contract.direccionEntrega }}</p>
+        <p class="card-text"><strong>Dirección de Destino:</strong> {{ contract.direccionDestino }}</p>
+        <p class="card-text"><strong>Fecha del Servicio:</strong> {{ contract.fechaServicio }}</p>
+        <p class="card-text"><strong>Hora del Servicio:</strong> {{ contract.horaServicio }}</p><br>
+        <button id="submitButton" type="submit" (click)="showAcceptModal(contract)">Aceptar</button>
+        <button id="cancelButton" type="button" (click)="rechazarContrato(contract)">Rechazar</button>
+      </div>
+    </div>
+    <div *ngIf="showAcceptForm" class="accept-form">
+      <h2>Aceptar Contrato</h2>
+      <form (ngSubmit)="aceptarContrato">
+      <label for="costoDelServicio">Costo del Servicio:</label>
+        <input type="number" id="costoDelServicio" name="costoDelServicio" [(ngModel)]="costoDelServicio" required>
+        <button type="submit">Aceptar</button>
+        <button type="button" (click)="cancelarAceptacion()">Cancelar</button>
+      </form>
+    </div>
+    <div class="col-md-4">
+      <h1>Contracts Accepted</h1>
+      <div *ngFor="let contract of acceptedContracts" class="contract-card">
+        <!-- Mostrar contratos aceptados aquí -->
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h1>Contracts Rejected</h1>
+      <div *ngFor="let contract of rejectedContracts" class="contract-card">
+        <h1 class="card-title"><strong>Servicios:</strong> {{ contract.servicios }}</h1><br>
+        <p class="card-text"><strong>Dirección de Entrega:</strong> {{ contract.direccionEntrega }}</p>
+        <p class="card-text"><strong>Dirección de Destino:</strong> {{ contract.direccionDestino }}</p>
+        <p class="card-text"><strong>Fecha del Servicio:</strong> {{ contract.fechaServicio }}</p>
+        <p class="card-text"><strong>Hora del Servicio:</strong> {{ contract.horaServicio }}</p><br>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

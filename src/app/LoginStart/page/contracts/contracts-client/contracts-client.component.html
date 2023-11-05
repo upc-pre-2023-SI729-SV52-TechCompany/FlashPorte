@@ -1,0 +1,31 @@
+<app-toolbar-client></app-toolbar-client>
+<div class="container" style="margin-bottom: 20px;">
+  <br><br><br>
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Recent Contracts</h1>
+      <div *ngFor="let contract of clientContracts" class="contract-card"><br>
+        <h1 class="card-title"><strong>Servicios:</strong> {{ contract.servicios }}</h1><br>
+        <p class="card-text"> <strong>Dirección de Entrega:</strong> {{ contract.direccionEntrega }}</p>
+        <p class="card-text"><strong>Dirección de Destino:</strong> {{ contract.direccionDestino }}</p>
+        <p class="card-text"><strong>Fecha del Servicio:</strong> {{ contract.fechaServicio }}</p>
+        <p class="card-text"><strong>Hora del Servicio:</strong> {{ contract.horaServicio }}</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h1>Contracts Accepted</h1>
+        <!-- Mostrar contratos aceptados aquí -->
+      </div>
+    <div class="col-md-4">
+      <h1>Contracts Rejected</h1>
+      <div *ngFor="let contract of rejectedPermanentContracts" class="contract-card">
+        <h1 class="card-title"><strong>Servicios:</strong> {{ contract.servicios }}</h1><br>
+        <p class="card-text"><strong>Dirección de Entrega:</strong> {{ contract.direccionEntrega }}</p>
+        <p class="card-text"><strong>Dirección de Destino:</strong> {{ contract.direccionDestino }}</p>
+        <p class="card-text"><strong>Fecha del Servicio:</strong> {{ contract.fechaServicio }}</p>
+        <p class="card-text"><strong>Hora del Servicio:</strong> {{ contract.horaServicio }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

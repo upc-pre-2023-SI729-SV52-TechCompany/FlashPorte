@@ -1,6 +1,8 @@
 export interface Contract {
     clientId: any;
     companyId: any;
+    nombre: any;
+    foto: any;
     fechaHoy: any;
     servicios: any;
     direccionEntrega: any;
@@ -11,4 +13,6 @@ export interface Contract {
     cvvTarjeta: any;
     vencimientoTarjeta: any;
     id: any;
+    rejectedPermanent: boolean;
+    costoServicio?: number;
 }

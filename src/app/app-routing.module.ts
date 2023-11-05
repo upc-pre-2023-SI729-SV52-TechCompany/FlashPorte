@@ -14,7 +14,8 @@ import { ProfileCompanyComponent } from "./LoginStart/page/profile/profile-compa
 import { ClientSettingsComponent } from "./LoginStart/page/settings/client-settings/client-settings.component";
 import { CompanySettingsComponent } from "./LoginStart/page/settings/company-settings/company-settings.component";
 import { SearchvehicleComponent } from "./LoginStart/page/searchvehicle/searchvehicle.component";
-import { ContractsComponent } from "./LoginStart/page/contracts/contracts.component";
+import { ContractsClientComponent } from "./LoginStart/page/contracts/contracts-client/contracts-client.component";
+import { ContractsCompanyComponent } from "./LoginStart/page/contracts/contracts-company/contracts-company.component";
 import { SupportCompanyComponent } from "./LoginStart/page/support/support-company/support-company.component";
 import { SupportClientComponent } from "./LoginStart/page/support/support-client/support-client.component";
 import { HomeCompanyComponent } from "./LoginStart/page/Home/home-company/home-company.component";
@@ -39,7 +40,8 @@ const routes: Routes = [
   { path: 'home-company/:id', component: HomeCompanyComponent },
   { path: 'home-client/:id', component: HomeClientComponent },
   { path: 'search-vehicle/:id', component: SearchvehicleComponent },
-  { path: 'contracts/:id', component: ContractsComponent },
+  { path: 'contracts-client/:id', component: ContractsClientComponent },
+  { path: 'contracts-company/:id', component: ContractsCompanyComponent },
   { path: 'support-company/:id', component: SupportCompanyComponent },
   { path: 'support-client/:id', component: SupportClientComponent },
   { path: 'vehiclereservation/:id', component: VehicleReservationComponent},

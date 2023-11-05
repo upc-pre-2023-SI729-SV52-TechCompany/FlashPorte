@@ -62,7 +62,7 @@ export class HomeCompanyComponent {
     );
   }
 
-  getContractClientPhoto(contract: Contract) {
+  /*getContractClientPhoto(contract: Contract) {
     const client = this.clients.find(c => c.id === contract.clientId);
     console.log('Client:', client);
     return client ? client.photo : '';
@@ -72,5 +72,5 @@ export class HomeCompanyComponent {
     const client = this.clients.find(c => c.id === contract.clientId);
     console.log('Client:', client);
     return client ? client.fullname : '';
-  }
+  }*/
 }

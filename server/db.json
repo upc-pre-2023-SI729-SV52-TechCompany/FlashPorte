@@ -77,6 +77,8 @@
     {
       "clientId": "1",
       "companyId": 1,
+      "nombre": "Gerardo Ochoa",
+      "foto": "https://img.freepik.com/foto-gratis/hombre-joven-guapo-nuevo-corte-pelo-estilo_176420-19636.jpg",
       "fechaHoy": "2023-11-04",
       "servicios": "Turismo",
       "direccionEntrega": "Monterrico",
@@ -91,6 +93,8 @@
     {
       "clientId": "2",
       "companyId": 2,
+      "nombre": "Mateo Lopez",
+      "foto": "https://img.europapress.es/fotoweb/fotonoticia_20150331134913-15031252329_420.jpg",
       "fechaHoy": "2023-11-04",
       "servicios": "Carga",
       "direccionEntrega": "Miraflores",
@@ -105,6 +109,8 @@
     {
       "clientId": "1",
       "companyId": 1,
+      "nombre": "Gerardo Ochoa",
+      "foto": "https://img.freepik.com/foto-gratis/hombre-joven-guapo-nuevo-corte-pelo-estilo_176420-19636.jpg",
       "fechaHoy": "2023-11-04",
       "servicios": "Taxi",
       "direccionEntrega": "Chorrillos",
@@ -119,6 +125,8 @@
     {
       "clientId": "2",
       "companyId": 2,
+      "nombre": "Mateo Lopez",
+      "foto": "https://img.europapress.es/fotoweb/fotonoticia_20150331134913-15031252329_420.jpg",
       "fechaHoy": "2023-11-09",
       "servicios": "carga",
       "direccionEntrega": "Chorrillos",
@@ -129,6 +137,16 @@
       "cvvTarjeta": "123",
       "vencimientoTarjeta": "16/25",
       "id": 4
+    }
+  ],
+  "reviews": [
+    {
+      "clientId": "1",
+      "companyId": 1,
+      "nombreUsuario": "Gerardo Ochoa",
+      "calificacion": 4,
+      "resenia": "El servicio fue bueno, me enseñó los lugares más impresionantes",
+      "id": 1
     }
   ]
 }

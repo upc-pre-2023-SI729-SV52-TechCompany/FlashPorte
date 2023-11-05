@@ -18,10 +18,13 @@ export class VehicleReservationComponent {
   resenia: string = '';
   mostrarFormulario: boolean = false;
   ContractsForm: FormGroup;
+  ReviewsForm: FormGroup;
   errorMessage: string = '';
 
   constructor(private sharedService: SharedService, private fb: FormBuilder, private companyDataService: FastporteDataService, private route: ActivatedRoute, private activatedRoute: ActivatedRoute, private router: Router, private api: FastporteDataService) {
     this.ContractsForm = this.fb.group({
+      nombre: ['', Validators.required],
+      foto: ['', Validators.required],
       fechaHoy: ['', Validators.required],
       servicios: ['', Validators.required],
       direccionEntrega: ['', Validators.required],
@@ -31,6 +34,11 @@ export class VehicleReservationComponent {
       numeroTarjeta: ['', Validators.required],
       cvvTarjeta: ['', Validators.required],
       vencimientoTarjeta: ['', Validators.required]
+    });
+    this.ReviewsForm = this.fb.group({
+      nombreUsuario: ['', Validators.required],
+      calificacion: ['', Validators.required],
+      resenia: ['', Validators.required]
     });
     this.activatedRoute.params.subscribe(
       params => {
@@ -62,13 +70,15 @@ export class VehicleReservationComponent {
     const clientId = this.route.snapshot.params['id'];
     const companyId = this.sharedService.selectedCompanyId;
 
-    if (!formData.fechaHoy || !formData.servicios || !formData.direccionEntrega || !formData.direccionDestino || !formData.fechaServicio || !formData.horaServicio || !formData.numeroTarjeta || !formData.cvvTarjeta || !formData.vencimientoTarjeta) {
+    if (!formData.nombre || !formData.foto  ||!formData.fechaHoy || !formData.servicios || !formData.direccionEntrega || !formData.direccionDestino || !formData.fechaServicio || !formData.horaServicio || !formData.numeroTarjeta || !formData.cvvTarjeta || !formData.vencimientoTarjeta) {
       this.errorMessage = 'All fields are required.';
       return;
     }
     const contractData = {
       clientId: clientId,
       companyId: companyId,
+      nombre: formData.nombre,
+      foto: formData.foto,
       fechaHoy: formData.fechaHoy,
       servicios: formData.servicios,
       direccionEntrega: formData.direccionEntrega,
@@ -85,10 +95,39 @@ export class VehicleReservationComponent {
         console.log('Contract created:', response);
         const clientId = this.route.snapshot.params['id'];
         console.log('Client ID:', clientId);
-        this.router.navigateByUrl(`/contracts/${clientId}`);
+        this.router.navigateByUrl(`/contracts-client/${clientId}`);
       }, error => {
         console.error('Error creating contract:', error);
       });
+  }
+
+  onReviewSubmit(){
+    const formData = this.ReviewsForm.value;
+    const clientId = this.route.snapshot.params['id'];
+    const companyId = this.sharedService.selectedCompanyId;
+
+    if (!formData.nombreUsuario || !formData.calificacion || !formData.resenia) {
+      this.errorMessage = 'All fields are required.';
+      return;
+    }
+
+    const reviewData={
+      clientId: clientId,
+      companyId: companyId,
+      nombreUsuario: formData.nombreUsuario,
+      calificacion: formData.calificacion,
+      resenia:formData.resenia
+    }
+
+    this.api.createReview(reviewData)
+        .subscribe(response => {
+          console.log('Review created:', response);
+          const clientId = this.route.snapshot.params['id'];
+          console.log('Client ID:', clientId);
+          this.router.navigateByUrl(`/search-vehicle/${clientId}`);
+        }, error => {
+          console.error('Error creating review:', error);
+        });
   }
 
     toggleElement()
@@ -99,13 +138,6 @@ export class VehicleReservationComponent {
     setRating(rating:number)
     {
       this.calificacion = rating;
-    }
-
-    enviarResenia()
-    {
-      console.log('Nombre de usuario:', this.nombreUsuario);
-      console.log('Calificación:', this.calificacion);
-      console.log('Reseña:', this.resenia);
     }
 
     toggleFormulario()

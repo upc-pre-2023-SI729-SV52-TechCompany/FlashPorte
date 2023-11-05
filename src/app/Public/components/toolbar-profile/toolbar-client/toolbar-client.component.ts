@@ -52,7 +52,7 @@ export class ToolbarClientComponent {
 
   pageContracts() {
     const clientId = this.route.snapshot.params['id'];
-    this.router.navigateByUrl(`/contracts/${clientId}`);
+    this.router.navigateByUrl(`/contracts-client/${clientId}`);
   }
 
   pageSupport() {

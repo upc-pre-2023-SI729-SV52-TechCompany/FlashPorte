@@ -43,6 +43,11 @@ export class ToolbarCompanyComponent {
     this.router.navigateByUrl(`/profile-company/${companyId}`);
   }
 
+  pageContracts(){
+    const companyId = this.route.snapshot.params['id'];
+    this.router.navigateByUrl(`/contracts-company/${companyId}`);
+  }
+
   pageSupport(){
     const companyId = this.route.snapshot.params['id'];
     this.router.navigateByUrl(`/support-company/${companyId}`);

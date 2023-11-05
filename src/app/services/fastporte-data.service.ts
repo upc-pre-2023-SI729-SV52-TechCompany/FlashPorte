@@ -59,7 +59,7 @@ export class FastporteDataService {
   }
 
   getCompanyById(id: any): Observable<Company> {
-  return this.http.get<Company>(this.base_url+"/"+"companies").pipe(retry(2),catchError(this.handleError));
+    return this.http.get<Company>(this.base_url+"/"+"companies").pipe(retry(2),catchError(this.handleError));
   }
 
   //for settings
@@ -76,7 +76,19 @@ export class FastporteDataService {
   }
 
   getAllContracts(): Observable<any[]> {
-    return this.http.get<any[]>(`${this.base_url}/contracts`)
-      .pipe(retry(2), catchError(this.handleError));
+    return this.http.get<any[]>(`${this.base_url}/contracts`).pipe(retry(2), catchError(this.handleError));
+  }
+
+  updateContracts(id: any, data: any): Observable<any> {
+    data.costoServicio = 0;
+    return this.http.put(`${this.base_url}/contracts/${id}`, JSON.stringify(data), this.httpOptions);
+  }
+
+  createReview(reviewData: any): Observable<any> {
+    return this.http.post(`${this.base_url}/reviews`, JSON.stringify(reviewData), this.httpOptions);
+  }
+
+  getAllReviews(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.base_url}/reviews`).pipe(retry(2), catchError(this.handleError));
   }
 }

@@ -24,7 +24,8 @@ import { CompanySettingsComponent } from "./LoginStart/page/settings/company-set
 import { SearchvehicleComponent } from "./LoginStart/page/searchvehicle/searchvehicle.component";
 import { HomeCompanyComponent } from "./LoginStart/page/Home/home-company/home-company.component";
 import { HomeClientComponent } from "./LoginStart/page/Home/home-client/home-client.component";
-import { ContractsComponent } from "./LoginStart/page/contracts/contracts.component";
+import { ContractsClientComponent } from "./LoginStart/page/contracts/contracts-client/contracts-client.component";
+import { ContractsCompanyComponent } from "./LoginStart/page/contracts/contracts-company/contracts-company.component";
 import { SupportClientComponent } from "./LoginStart/page/support/support-client/support-client.component";
 import { SupportCompanyComponent } from "./LoginStart/page/support/support-company/support-company.component";
 import { VehicleReservationComponent } from './LoginStart/page/vehicle-reservation/vehicle-reservation.component';
@@ -58,7 +59,8 @@ import { MatTabsModule } from "@angular/material/tabs";
     HomeCompanyComponent,
     HomeClientComponent,
     SearchvehicleComponent,
-    ContractsComponent,
+    ContractsClientComponent,
+    ContractsCompanyComponent,
     SupportClientComponent,
     SupportCompanyComponent,
     ToolbarLoginComponent,
