@@ -32,7 +32,7 @@
     <div class="col-md-4">
       <h1>Contracts Rejected</h1>
       <div *ngFor="let contract of rejectedContracts" class="contract-card">
-        <h1 class="card-title"><strong>Servicios:</strong> {{ contract.servicios }}</h1><br>
+        <h1 class="card-title"><strong>Servicio:</strong> {{ contract.servicios }}</h1><br>
         <p class="card-text"><strong>Dirección de Entrega:</strong> {{ contract.direccionEntrega }}</p>
         <p class="card-text"><strong>Dirección de Destino:</strong> {{ contract.direccionDestino }}</p>
         <p class="card-text"><strong>Fecha del Servicio:</strong> {{ contract.fechaServicio }}</p>
@@ -40,5 +40,5 @@
       </div>
     </div>
   </div>
-</div>
+</div><br><br>
 <app-footer></app-footer>
