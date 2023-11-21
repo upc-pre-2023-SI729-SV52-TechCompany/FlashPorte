@@ -12,6 +12,7 @@ import {Client} from "../../../models/client.model";
 })
 export class ContractsCompanyComponent implements OnInit {
   company: any = '';
+  currentContract: Contract | null = null;
   clientData!: Client;
   clients: any[] = [];
   contracts: Contract[] = [];
@@ -30,54 +31,68 @@ export class ContractsCompanyComponent implements OnInit {
   }
 
   showAcceptModal(contract: Contract) {
-    // Implementation of the method
+    // Asignar el contrato actual
+    this.currentContract = contract;
+    // Lógica para mostrar el modal de aceptación
+    this.showAcceptForm = true;
   }
-
   cancelarAceptacion() {
-    // Implementation of the method
+    // Limpiar el contrato actual al cancelar la aceptación
+    this.currentContract = null;
+    // Lógica para cancelar la aceptación
+    this.showAcceptForm = false;
   }
 
-  aceptarContrato(contract: Contract) {
-    if (this.costoDelServicio > 0) {
-      contract.costoServicio = this.costoDelServicio;
+  aceptarReserva(contract: Contract) {
+    if (!contract.aceptado) {
+      this.showAcceptModal(contract);
+    } else {
+      contract.estado = 'Programado';
+      this.api.updateContracts(contract.id, contract).subscribe(/* ... */);
+    }
+  }
 
-      // Llama a la función de actualización en el servicio
-      this.api.updateContracts(contract.id, contract).subscribe(
-        (response) => {
-          console.log('Contrato actualizado con el costo del servicio:', response);
+  finalizarReserva(contract: Contract) {
+    contract.estado = 'Finalizado';
+    this.api.updateContracts(contract.id, contract).subscribe(/* ... */);
+  }
+
+  rechazarReserva(contract: Contract) {
+    contract.estado = 'Rechazado';
+    this.api.updateContracts(contract.id, contract).subscribe(/* ... */);
+  }
+  aceptarContrato() {
+    console.log('Costo antes de la actualización:', this.costoDelServicio);
+
+    if (this.currentContract && this.costoDelServicio > 0 ) {
+      this.currentContract.estado = 'Programado';
+      this.currentContract.aceptado = true;
+      this.currentContract.costoServicio = this.costoDelServicio;
+      this.api.updateContracts(this.currentContract.id, this.currentContract).subscribe(
+        () => {
+          console.log('Contract successfully updated.');
+          this.getAllContracts();
         },
         (error) => {
-          console.log('Error al actualizar el contrato:', error);
+          console.error('Error updating contract:', error);
         }
       );
-      this.costoDelServicio = 0;
+      console.log('Costo después de la actualización:', this.currentContract.costoServicio);
+
+      // Limpiar el contrato actual después de aceptarlo
+      this.currentContract = null;
       this.showAcceptForm = false;
     } else {
-      console.log('El costo del servicio no es válido.');
+      console.log('Error: No hay contrato actual o el costo del servicio no es válido.');
     }
   }
 
-  rechazarContrato(contract: Contract) {
-    // Verificar si el contrato ya está en la lista de contratos rechazados
-    const isAlreadyRejected = this.rejectedContracts.includes(contract);
-
-    if (!isAlreadyRejected) {
-      // Elimina el contrato de la lista de contratos activos
-      const index = this.contracts.findIndex(c => c.id === contract.id);
-      if (index !== -1) {
-        this.contracts.splice(index, 1);
-      }
-
-      // Agrega el contrato a la lista de contratos rechazados
-      this.rejectedContracts.push(contract);
-    }
-    // Si ya está en la lista de contratos rechazados, no hacemos nada
-  }
 
   ngOnInit(): void {
     this.getAllClients().subscribe(() => {
       this.getAllContracts();
     });
+    console.log('Estado "En proceso" se está filtrando correctamente:', this.contracts.filter(contract => contract.estado === 'En proceso'));
   }
   getAllClients() {
     return this.clientDataService.getAllClients().pipe(
@@ -91,6 +106,7 @@ export class ContractsCompanyComponent implements OnInit {
     this.companyDataService.getAllContracts().subscribe((res: Contract[]) => {
       const companyId = this.company.id;
       this.contracts = res.filter(contract => contract.companyId === companyId);
+      console.log('Contratos actualizados:', this.contracts);
     });
   }
   getCompany(id: any) {

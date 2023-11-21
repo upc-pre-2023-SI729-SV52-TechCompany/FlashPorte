@@ -6,21 +6,24 @@
       <h1>Recent Contracts</h1>
       <div *ngFor="let contract of contracts" class="contract-card"><br>
         <h1 class="card-title"><strong>Servicios:</strong> {{ contract.servicios }}</h1><br>
+        <p class="card-text"> <strong>Cliente:</strong> {{ contract.nombre }}</p>
         <p class="card-text"> <strong>Dirección de Entrega:</strong> {{ contract.direccionEntrega }}</p>
         <p class="card-text"><strong>Dirección de Destino:</strong> {{ contract.direccionDestino }}</p>
         <p class="card-text"><strong>Fecha del Servicio:</strong> {{ contract.fechaServicio }}</p>
-        <p class="card-text"><strong>Hora del Servicio:</strong> {{ contract.horaServicio }}</p><br>
-        <button id="submitButton" type="submit" (click)="showAcceptModal(contract)">Aceptar</button>
-        <button id="cancelButton" type="button" (click)="rechazarContrato(contract)">Rechazar</button>
+        <p class="card-text"><strong>Hora del Servicio:</strong> {{ contract.horaServicio }}</p>
+        <p class="card-text"><strong>Costo del Servicio:</strong> S/ {{ (contract.estado === 'Programado' && contract.costoServicio) ? contract.costoServicio : 'Aún no definido' }}</p>
+        <p class="card-text"><strong>Estado:</strong> {{ contract.estado }}</p><br>
+        <button id="submitButton" *ngIf="contract.estado === 'En proceso' && !contract.aceptado" (click)="aceptarReserva(contract)">Aceptar Reserva</button>
+        <button id="cancelButton" *ngIf="contract.estado === 'En proceso' && contract.aceptado" (click)="finalizarReserva(contract)">Finalizar Reserva</button>
+        <button id="cancelButtonR" *ngIf="contract.estado === 'En proceso'" (click)="rechazarReserva(contract)">Rechazar Reserva</button>
       </div>
     </div>
     <div *ngIf="showAcceptForm" class="accept-form">
       <h1>Aceptar Contrato</h1>
-      <form (ngSubmit)="aceptarContrato">
-      <label for="costoDelServicio">Costo del Servicio:</label>
-        <input type="number" id="costoDelServicio" name="costoDelServicio" [(ngModel)]="costoDelServicio" required>
-        <button type="submit">Aceptar</button>
-        <button type="button" (click)="cancelarAceptacion()">Cancelar</button>
+      <form (ngSubmit)="aceptarContrato()">
+          <label for="costoDelServicio">Costo del Servicio:</label>
+          <input type="number" id="costoDelServicio" name="costoDelServicio" [(ngModel)]="costoDelServicio" required>
+          <button type="submit">Aceptar</button>
       </form>
     </div>
     <div class="col-md-4">

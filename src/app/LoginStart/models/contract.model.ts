@@ -3,6 +3,7 @@ export interface Contract {
     companyId: any;
     nombre: any;
     foto: any;
+    nombreServicio: any;
     fechaHoy: any;
     servicios: any;
     direccionEntrega: any;
@@ -13,6 +14,10 @@ export interface Contract {
     cvvTarjeta: any;
     vencimientoTarjeta: any;
     id: any;
+    estado: string;
     rejectedPermanent: boolean;
     costoServicio?: number;
+    costoDelServicio: number;
+    aceptado?: boolean;
+    estadoPermanente?: boolean;
 }

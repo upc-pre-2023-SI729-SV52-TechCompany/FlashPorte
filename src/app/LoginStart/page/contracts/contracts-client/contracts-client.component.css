@@ -1,7 +1,7 @@
 .contract-card {
   margin: 10px;
   width: 400px; /* Ancho deseado de la tarjeta */
-  height: 300px; /* Altura deseada de la tarjeta */
+  height: 390px; /* Altura deseada de la tarjeta */
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -16,4 +16,32 @@
 .h2 {
   margin-left: 20px;
   font-size: 32px;
+}
+
+.form-buttons {
+  margin-top: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button#cancelButton {
+  background-color: #f44336;
+  margin-left: 10px;
+}
+
+button#cancelButtonCosto {
+  background-color: #f44336;
+  margin-left: 10px;
+}
+
+.error-messages {
+  color: #f44336;
 }

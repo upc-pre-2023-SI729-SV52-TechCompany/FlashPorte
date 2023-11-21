@@ -79,6 +79,7 @@ export class VehicleReservationComponent {
       companyId: companyId,
       nombre: formData.nombre,
       foto: formData.foto,
+      estado: 'En proceso',
       fechaHoy: formData.fechaHoy,
       servicios: formData.servicios,
       direccionEntrega: formData.direccionEntrega,
@@ -143,10 +144,5 @@ export class VehicleReservationComponent {
     toggleFormulario()
     {
       this.mostrarFormulario = !this.mostrarFormulario;
-    }
-
-    realizarReserva()
-    {
-      // Agrega aquí la lógica para manejar la reserva
     }
 }
