@@ -61,32 +61,42 @@ export class ContractsCompanyComponent implements OnInit {
     contract.estado = 'Rechazado';
     this.api.updateContracts(contract.id, contract).subscribe(/* ... */);
   }
+
   aceptarContrato() {
     console.log('Costo antes de la actualización:', this.costoDelServicio);
 
-    if (this.currentContract && this.costoDelServicio > 0 ) {
+    if (this.currentContract && this.costoDelServicio > 0) {
       this.currentContract.estado = 'Programado';
       this.currentContract.aceptado = true;
       this.currentContract.costoServicio = this.costoDelServicio;
+
+      console.log('Enviando contrato para actualizar:', this.currentContract);
+
       this.api.updateContracts(this.currentContract.id, this.currentContract).subscribe(
         () => {
-          console.log('Contract successfully updated.');
+          console.log('Contrato actualizado con éxito.');
           this.getAllContracts();
         },
         (error) => {
-          console.error('Error updating contract:', error);
+          console.error('Error al actualizar el contrato:', error);
         }
       );
-      console.log('Costo después de la actualización:', this.currentContract.costoServicio);
 
-      // Limpiar el contrato actual después de aceptarlo
-      this.currentContract = null;
+      console.log('Costo después de la actualización:', this.currentContract.costoServicio);
+      //this.currentContract = null;
       this.showAcceptForm = false;
     } else {
       console.log('Error: No hay contrato actual o el costo del servicio no es válido.');
     }
   }
 
+  filterAcceptedContracts(): void {
+    this.acceptedContracts = this.contracts.filter(contract => contract.estado === 'Aceptado' || contract.estado === 'Finalizado');
+  }
+
+  filterRejectedContracts(): void {
+    this.rejectedContracts = this.contracts.filter(contract => contract.estado === 'Rechazado' || contract.estado === 'Cancelado');
+  }
 
   ngOnInit(): void {
     this.getAllClients().subscribe(() => {
@@ -107,6 +117,8 @@ export class ContractsCompanyComponent implements OnInit {
       const companyId = this.company.id;
       this.contracts = res.filter(contract => contract.companyId === companyId);
       console.log('Contratos actualizados:', this.contracts);
+      this.filterAcceptedContracts();
+      this.filterRejectedContracts();
     });
   }
   getCompany(id: any) {

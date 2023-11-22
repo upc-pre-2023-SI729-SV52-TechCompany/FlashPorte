@@ -16,7 +16,7 @@ export interface Contract {
     id: any;
     estado: string;
     rejectedPermanent: boolean;
-    costoServicio?: number;
+    costoServicio: number;
     costoDelServicio: number;
     aceptado?: boolean;
     estadoPermanente?: boolean;
