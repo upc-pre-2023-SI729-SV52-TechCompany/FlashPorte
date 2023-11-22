@@ -80,6 +80,7 @@ export class VehicleReservationComponent {
       nombre: formData.nombre,
       foto: formData.foto,
       estado: 'En proceso',
+      costoServicio: "0",
       fechaHoy: formData.fechaHoy,
       servicios: formData.servicios,
       direccionEntrega: formData.direccionEntrega,
