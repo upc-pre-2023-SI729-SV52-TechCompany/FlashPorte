@@ -15,6 +15,7 @@ export class HomeCompanyComponent {
   clientData!: Client;
   clients: any[] = [];
   contracts: Contract[] = [];
+  popularClients: any[] = [];
 
   constructor(private companyDataService: FastporteDataService, private clientDataService: FastporteDataService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.activatedRoute.params.subscribe(
@@ -30,16 +31,14 @@ export class HomeCompanyComponent {
     this.getAllContracts();*/
     this.getAllClients().subscribe(() => {
       this.getAllContracts();
+      this.getPopularClients();
     });
   }
 
   getAllClients() {
-    /*this.clientDataService.getAllClients().subscribe((res: any) => {
-      this.clients = res;
-    });*/
     return this.clientDataService.getAllClients().pipe(
         tap((res: any) => {
-          this.clients = res; // Asigna los datos de los clientes al arreglo 'clients'
+          this.clients = res;
         })
     );
   }
@@ -62,15 +61,13 @@ export class HomeCompanyComponent {
     );
   }
 
-  /*getContractClientPhoto(contract: Contract) {
-    const client = this.clients.find(c => c.id === contract.clientId);
-    console.log('Client:', client);
-    return client ? client.photo : '';
+  getPopularClients() {
+    // Obtener dos conductores populares al azar
+    this.popularClients = this.getRandomElements(this.clients, 2);
   }
 
-  getContractClientName(contract: Contract) {
-    const client = this.clients.find(c => c.id === contract.clientId);
-    console.log('Client:', client);
-    return client ? client.fullname : '';
-  }*/
+  getRandomElements(arr: any[], numElements: number): any[] {
+    const shuffled = arr.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, numElements);
+  }
 }

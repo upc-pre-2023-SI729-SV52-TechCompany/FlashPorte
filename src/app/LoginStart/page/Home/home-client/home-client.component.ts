@@ -12,6 +12,7 @@ export class HomeClientComponent {
   client: any = '';
   companyData!: Company;
   companies: any[] = [];
+  popularDrivers: any[] = [];
 
   constructor(private companyDataService: FastporteDataService, private clientDataService: FastporteDataService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.activatedRoute.params.subscribe(
@@ -29,6 +30,7 @@ export class HomeClientComponent {
   getAllCompanies() {
     this.companyDataService.getAllCompanies().subscribe((res: any) => {
       this.companies = res;
+      this.getPopularDrivers();
     });
   }
 
@@ -42,5 +44,14 @@ export class HomeClientComponent {
         console.log("Error:", err);
       }
     );
+  }
+
+  getPopularDrivers() {
+    this.popularDrivers = this.getRandomElements(this.companies, 2);
+  }
+
+  getRandomElements(arr: any[], numElements: number): any[] {
+    const shuffled = arr.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, numElements);
   }
 }

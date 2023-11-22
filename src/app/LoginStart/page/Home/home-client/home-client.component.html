@@ -10,13 +10,13 @@
 <div class="container">
   <div class="popular">
     <h2>Popular Drivers</h2>
-    <div *ngFor="let company of companies" class="left-container">
+    <div *ngFor="let driver of popularDrivers" class="left-container">
       <div class="company-details">
-        <img src="{{ company.photo }}" alt="company" class="circular-image">
+        <img src="{{ driver.photo }}" alt="company" class="circular-image">
         <div class="info">
-          <h3>{{ company.fullName }}</h3>
-          <p>{{ company.email }}</p>
-          <p>{{ company.country }}</p>
+          <h3>{{ driver.fullName }}</h3>
+          <p>{{ driver.email }}</p>
+          <p>{{ driver.country }}</p>
         </div>
       </div>
     </div>

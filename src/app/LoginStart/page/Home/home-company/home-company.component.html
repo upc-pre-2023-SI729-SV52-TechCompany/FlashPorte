@@ -10,15 +10,15 @@
 <div class="container">
   <div class="popular">
     <h2>Popular Clients</h2>
-      <div *ngFor="let client of clients" class="left-container">
-        <div class="client-details">
-          <img src="{{ client.photo }}" alt="client" class="circular-image1">
-          <div class="info">
-            <h3>{{ client.fullname }}</h3>
-            <p>{{ client.email }}</p>
-            <p>{{ client.country }}</p>
-          </div>
+    <div *ngFor="let client of popularClients" class="left-container">
+      <div class="client-details">
+        <img src="{{ client.photo }}" alt="driver" class="circular-image1">
+        <div class="info">
+          <h3>{{ client.fullname }}</h3>
+          <p>{{ client.email }}</p>
+          <p>{{ client.country }}</p>
         </div>
+      </div>
     </div>
   </div>
   <div class="contracts">
@@ -35,6 +35,5 @@
         </div>
       </div>
   </div>
-
 </div>
 <app-footer></app-footer>
