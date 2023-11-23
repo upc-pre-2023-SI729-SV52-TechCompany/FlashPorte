@@ -58,7 +58,7 @@ export class ContractsCompanyComponent implements OnInit {
                 this.getAllContracts();
                 const index = this.contracts.findIndex(contract => contract.id === this.currentContract?.id);
                 if (index !== -1) {
-                    this.contracts[index].estado = 'Programada';
+                    this.contracts[index].estado = 'Programado';
                     this.contracts[index].costoServicio = this.costoDelServicio;
                 }
                 this.currentContract = null;
