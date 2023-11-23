@@ -80,7 +80,6 @@ export class FastporteDataService {
   }
 
   updateContracts(id: any, data: any): Observable<any> {
-    data.costoServicio = 0;
     return this.http.put(`${this.base_url}/contracts/${id}`, JSON.stringify(data), this.httpOptions);
   }
 

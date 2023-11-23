@@ -1,6 +1,6 @@
 export const environment = {
     development: false,
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://flashporte-api.onrender.com/api/v1',
 
     firebaseConfig : {
         apiKey: "AIzaSyAPaGHgXb9cdwYegaJegsoYBJRX5Zt8S60",

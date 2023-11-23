@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FastporteDataService } from 'src/app/services/fastporte-data.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import { ChangeDetectorRef } from '@angular/core';
 import {tap} from "rxjs";
 import {Contract} from "../../../models/contract.model";
 import {Client} from "../../../models/client.model";
@@ -21,7 +22,7 @@ export class ContractsCompanyComponent implements OnInit {
   showAcceptForm = false; // Variable para mostrar/ocultar el formulario de aceptación
   costoDelServicio: number = 0;
 
-  constructor(private companyDataService: FastporteDataService, private api: FastporteDataService, private clientDataService: FastporteDataService, private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private companyDataService: FastporteDataService, private api: FastporteDataService, private clientDataService: FastporteDataService, private activatedRoute: ActivatedRoute, private router: Router, private cdr: ChangeDetectorRef) {
     this.activatedRoute.params.subscribe(
       params => {
         this.getCompany(params['id']);
@@ -31,9 +32,7 @@ export class ContractsCompanyComponent implements OnInit {
   }
 
   showAcceptModal(contract: Contract) {
-    // Asignar el contrato actual
     this.currentContract = contract;
-    // Lógica para mostrar el modal de aceptación
     this.showAcceptForm = true;
   }
   cancelarAceptacion() {
@@ -43,7 +42,32 @@ export class ContractsCompanyComponent implements OnInit {
     this.showAcceptForm = false;
   }
 
-  aceptarReserva(contract: Contract) {
+    aceptarContrato() {
+        if (this.currentContract) {
+            this.currentContract.estado = 'Programado';
+
+            // Log the value of costoDelServicio for debugging
+            console.log('Costo del Servicio before update:', this.costoDelServicio);
+            this.currentContract.costoServicio = this.costoDelServicio;
+
+            // Update the contract in the API
+            this.api.updateContracts(this.currentContract.id, this.currentContract).subscribe(() => {
+                // Log a message indicating that the API update is successful
+                console.log('Contract updated successfully');
+
+                this.getAllContracts();
+                const index = this.contracts.findIndex(contract => contract.id === this.currentContract?.id);
+                if (index !== -1) {
+                    this.contracts[index].estado = 'Programada';
+                    this.contracts[index].costoServicio = this.costoDelServicio;
+                }
+                this.currentContract = null;
+                this.showAcceptForm = false;
+            });
+        }
+    }
+
+    aceptarReserva(contract: Contract) {
     if (!contract.aceptado) {
       this.showAcceptModal(contract);
     } else {
@@ -62,33 +86,7 @@ export class ContractsCompanyComponent implements OnInit {
     this.api.updateContracts(contract.id, contract).subscribe(/* ... */);
   }
 
-  aceptarContrato() {
-    console.log('Costo antes de la actualización:', this.costoDelServicio);
 
-    if (this.currentContract && this.costoDelServicio > 0) {
-      this.currentContract.estado = 'Programado';
-      this.currentContract.aceptado = true;
-      this.currentContract.costoServicio = this.costoDelServicio;
-
-      console.log('Enviando contrato para actualizar:', this.currentContract);
-
-      this.api.updateContracts(this.currentContract.id, this.currentContract).subscribe(
-        () => {
-          console.log('Contrato actualizado con éxito.');
-          this.getAllContracts();
-        },
-        (error) => {
-          console.error('Error al actualizar el contrato:', error);
-        }
-      );
-
-      console.log('Costo después de la actualización:', this.currentContract.costoServicio);
-      //this.currentContract = null;
-      this.showAcceptForm = false;
-    } else {
-      console.log('Error: No hay contrato actual o el costo del servicio no es válido.');
-    }
-  }
 
   filterAcceptedContracts(): void {
     this.acceptedContracts = this.contracts.filter(contract => contract.estado === 'Aceptado' || contract.estado === 'Finalizado');

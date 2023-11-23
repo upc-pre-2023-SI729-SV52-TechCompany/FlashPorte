@@ -11,7 +11,7 @@
         <p class="card-text"><strong>Dirección de Destino:</strong> {{ contract.direccionDestino }}</p>
         <p class="card-text"><strong>Fecha del Servicio:</strong> {{ contract.fechaServicio }}</p>
         <p class="card-text"><strong>Hora del Servicio:</strong> {{ contract.horaServicio }}</p>
-        <p class="card-text"><strong>Costo del Servicio:</strong> S/ {{ contract.costoServicio || 'Aún no definido' }}</p>
+        <p class="card-text"><strong>Costo del Servicio:</strong> S/ {{ contract.costoServicio }}</p>
         <p class="card-text"><strong>Estado:</strong> {{ contract.estado }}</p><br>
         <button id="submitButton" *ngIf="contract.estado === 'Aceptado'" (click)="finalizarReserva(contract)">Finalizar Reserva</button>
         <button id="cancelButton" *ngIf="contract.estado === 'En proceso'" (click)="cancelarReserva(contract)">Cancelar Reserva</button>
