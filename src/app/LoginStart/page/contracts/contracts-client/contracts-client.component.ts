@@ -12,7 +12,8 @@ import { ActivatedRoute } from '@angular/router';
 export class ContractsClientComponent implements OnInit {
   company: any = '';
   clientContracts: Contract[] = [];
-  rejectedPermanentContracts:  Contract[] = [];
+  acceptedContracts: Contract[] = [];
+  rejectedContracts: Contract[] = [];
 
   constructor(private activatedRoute: ActivatedRoute, private api: FastporteDataService, private companyDataService: FastporteDataService) {
     this.activatedRoute.params.subscribe(
@@ -37,11 +38,10 @@ export class ContractsClientComponent implements OnInit {
   ngOnInit() {
     const clientId = this.activatedRoute.snapshot.params['id'];
 
-    // Realiza una solicitud HTTP para obtener todos los contratos
     this.api.getAllContracts().subscribe((contracts: Contract[]) => {
-      // Filtra los contratos para el cliente específico
       this.clientContracts = contracts.filter(contract => contract.clientId === clientId);
-      this.rejectedPermanentContracts = contracts.filter(contract => contract.clientId === clientId && contract.rejectedPermanent);
+      this.acceptedContracts = this.clientContracts.filter(contract => contract.estado === 'Aceptado' || contract.estado === 'Finalizado');
+      this.rejectedContracts = this.clientContracts.filter(contract => contract.estado === 'Cancelado' || contract.estado === 'Rechazado');
     });
   }
 

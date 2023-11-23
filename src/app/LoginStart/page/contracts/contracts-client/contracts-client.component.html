@@ -21,16 +21,28 @@
     </div>
     <div class="col-md-4">
       <h1>Contracts Accepted</h1>
-        <!-- Mostrar contratos aceptados aquí -->
-      </div>
-    <div class="col-md-4">
-      <h1>Contracts Rejected</h1>
-      <div *ngFor="let contract of rejectedPermanentContracts" class="contract-card">
+      <div *ngFor="let contract of acceptedContracts" class="contract-card">
         <h1 class="card-title"><strong>Servicios:</strong> {{ contract.servicios }}</h1><br>
+        <p class="card-text"> <strong>Transportista:</strong> {{ company.fullName }}</p>
         <p class="card-text"><strong>Dirección de Entrega:</strong> {{ contract.direccionEntrega }}</p>
         <p class="card-text"><strong>Dirección de Destino:</strong> {{ contract.direccionDestino }}</p>
         <p class="card-text"><strong>Fecha del Servicio:</strong> {{ contract.fechaServicio }}</p>
         <p class="card-text"><strong>Hora del Servicio:</strong> {{ contract.horaServicio }}</p>
+        <p class="card-text"><strong>Costo del Servicio:</strong> S/ {{ contract.costoServicio }}</p>
+        <p class="card-text"><strong>Estado:</strong> {{ contract.estado }}</p><br>
+      </div>
+      </div>
+    <div class="col-md-4">
+      <h1>Contracts Rejected</h1>
+      <div *ngFor="let contract of rejectedContracts" class="contract-card">
+        <h1 class="card-title"><strong>Servicios:</strong> {{ contract.servicios }}</h1><br>
+        <p class="card-text"> <strong>Transportista:</strong> {{ company.fullName }}</p>
+        <p class="card-text"><strong>Dirección de Entrega:</strong> {{ contract.direccionEntrega }}</p>
+        <p class="card-text"><strong>Dirección de Destino:</strong> {{ contract.direccionDestino }}</p>
+        <p class="card-text"><strong>Fecha del Servicio:</strong> {{ contract.fechaServicio }}</p>
+        <p class="card-text"><strong>Hora del Servicio:</strong> {{ contract.horaServicio }}</p>
+        <p class="card-text"><strong>Costo del Servicio:</strong> S/ {{ contract.costoServicio }}</p>
+        <p class="card-text"><strong>Estado:</strong> {{ contract.estado }}</p><br>
       </div>
     </div>
   </div>
