@@ -1,23 +1,22 @@
 export interface Contract {
-    clientId: any;
-    companyId: any;
-    nombre: any;
-    foto: any;
-    nombreServicio: any;
-    fechaHoy: any;
-    servicios: any;
-    direccionEntrega: any;
-    direccionDestino: any;
-    fechaServicio: any;
-    horaServicio: any;
-    numeroTarjeta: any;
-    cvvTarjeta: any;
-    vencimientoTarjeta: any;
-    id: any;
+    clientId: number;
+    companyId: number;
+    nombre: string;
+    foto: string;
+    nombreServicio: string;
+    fechaHoy: string;
+    servicios: string;
+    direccionEntrega: string;
+    direccionDestino: string;
+    fechaServicio: string;
+    horaServicio: string;
+    numeroTarjeta: string;
+    cvvTarjeta: string;
+    vencimientoTarjeta: string;
+    id: number;
     estado: string;
     rejectedPermanent: boolean;
     costoServicio: number;
-    costoDelServicio: number;
     aceptado?: boolean;
     estadoPermanente?: boolean;
 }

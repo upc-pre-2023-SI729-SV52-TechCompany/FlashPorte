@@ -1,7 +1,7 @@
 export interface Review {
-    clientId: any;
-    companyId: any;
-    nombreUsuario:any;
-    calificacion:any;
-    resenia:any;
+    clientId: number;
+    companyId: number;
+    nombreUsuario:string;
+    calificacion: any;
+    resenia: string;
 }
